@@ -1,0 +1,339 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://csc-workbench.local/schemas/analysis.outcome.v1.schema.json",
+  "title": "Analysis Outcome v1",
+  "description": "Stage conclusion derived from one CSC Workbench analysis job.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "version",
+    "jobId",
+    "stage",
+    "generatedAt",
+    "conclusion",
+    "summary",
+    "sources"
+  ],
+  "properties": {
+    "format": {
+      "const": "analysis.outcome"
+    },
+    "version": {
+      "const": 1
+    },
+    "jobId": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "stage": {
+      "enum": [
+        "csc",
+        "tbfv",
+        "localization"
+      ]
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "conclusion": {
+      "$ref": "#/$defs/conclusion"
+    },
+    "summary": {},
+    "sources": {
+      "$ref": "#/$defs/sources"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "stage": {
+            "const": "csc"
+          }
+        },
+        "required": [
+          "stage"
+        ]
+      },
+      "then": {
+        "properties": {
+          "conclusion": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "completed",
+                  "partial",
+                  "unknown"
+                ]
+              }
+            }
+          },
+          "summary": {
+            "$ref": "#/$defs/cscSummary"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "stage": {
+            "const": "tbfv"
+          }
+        },
+        "required": [
+          "stage"
+        ]
+      },
+      "then": {
+        "properties": {
+          "conclusion": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "pass",
+                  "fail",
+                  "unsupported",
+                  "unknown"
+                ]
+              }
+            }
+          },
+          "summary": {
+            "$ref": "#/$defs/tbfvSummary"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "stage": {
+            "const": "localization"
+          }
+        },
+        "required": [
+          "stage"
+        ]
+      },
+      "then": {
+        "properties": {
+          "conclusion": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "available",
+                  "unavailable"
+                ]
+              }
+            }
+          },
+          "summary": {
+            "$ref": "#/$defs/localizationSummary"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "reasonCode": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "conclusion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "completeness",
+        "reasonCodes"
+      ],
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "completeness": {
+          "enum": [
+            "complete",
+            "partial",
+            "unknown"
+          ]
+        },
+        "reasonCodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/reasonCode"
+          }
+        }
+      }
+    },
+    "sourceEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jobId",
+        "stage",
+        "artifacts"
+      ],
+      "properties": {
+        "jobId": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "stage": {
+          "enum": [
+            "csc",
+            "tbfv",
+            "localization"
+          ]
+        },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/nonEmptyString"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/sourceEntry"
+      }
+    },
+    "obligations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "total",
+        "concrete",
+        "unsat",
+        "ancestorStopped",
+        "rangeExcluded",
+        "unresolved"
+      ],
+      "properties": {
+        "total": {
+          "$ref": "#/$defs/count"
+        },
+        "concrete": {
+          "$ref": "#/$defs/count"
+        },
+        "unsat": {
+          "$ref": "#/$defs/count"
+        },
+        "ancestorStopped": {
+          "$ref": "#/$defs/count"
+        },
+        "rangeExcluded": {
+          "$ref": "#/$defs/count"
+        },
+        "unresolved": {
+          "$ref": "#/$defs/count"
+        }
+      }
+    },
+    "cscSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stopReason",
+        "obligations",
+        "truncatedLeaves",
+        "solverUnknownCalls",
+        "solverTimeoutCalls",
+        "executableTraceBackedTests"
+      ],
+      "properties": {
+        "stopReason": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "obligations": {
+          "$ref": "#/$defs/obligations"
+        },
+        "truncatedLeaves": {
+          "$ref": "#/$defs/count"
+        },
+        "solverUnknownCalls": {
+          "$ref": "#/$defs/count"
+        },
+        "solverTimeoutCalls": {
+          "$ref": "#/$defs/count"
+        },
+        "executableTraceBackedTests": {
+          "$ref": "#/$defs/count"
+        }
+      }
+    },
+    "tbfvSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "testcases",
+        "fsfUnits",
+        "passed",
+        "failed",
+        "unknown",
+        "unsupported",
+        "skipped",
+        "skippedScenarioUnmatched",
+        "skippedMissingTrace",
+        "skippedUntrustedTrace"
+      ],
+      "properties": {
+        "testcases": {
+          "$ref": "#/$defs/count"
+        },
+        "fsfUnits": {
+          "$ref": "#/$defs/count"
+        },
+        "passed": {
+          "$ref": "#/$defs/count"
+        },
+        "failed": {
+          "$ref": "#/$defs/count"
+        },
+        "unknown": {
+          "$ref": "#/$defs/count"
+        },
+        "unsupported": {
+          "$ref": "#/$defs/count"
+        },
+        "skipped": {
+          "$ref": "#/$defs/count"
+        },
+        "skippedScenarioUnmatched": {
+          "$ref": "#/$defs/count"
+        },
+        "skippedMissingTrace": {
+          "$ref": "#/$defs/count"
+        },
+        "skippedUntrustedTrace": {
+          "$ref": "#/$defs/count"
+        }
+      }
+    },
+    "localizationSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidateCount"
+      ],
+      "properties": {
+        "candidateCount": {
+          "$ref": "#/$defs/count"
+        }
+      }
+    }
+  }
+}

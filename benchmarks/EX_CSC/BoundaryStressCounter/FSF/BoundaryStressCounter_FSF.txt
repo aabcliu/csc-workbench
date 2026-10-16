@@ -1,0 +1,35 @@
+[fsf_1]
+    T: steps < 0 || steps > 500 || quota < 0 || quota > 500 || boost < 0 || boost > 500
+    D: return_value == -1
+
+[fsf_2]
+    T: steps >= 0 && steps <= 200 && quota >= 0 && quota <= 200 && boost >= 0 && boost <= 200 && (((steps + 2) / 3) <= 220)
+    D: return_value == ((steps + 2) / 3)
+
+[fsf_3]
+    T: steps >= 0 && steps <= 200 && quota >= 0 && quota <= 200 && boost >= 0 && boost <= 200 && (((steps + 2) / 3) > 220)
+    D: return_value == 220
+
+[fsf_4]
+    T: steps >= 0 && steps <= 200 && quota > 200 && quota <= 500 && boost >= 0 && boost <= 200 && (5 * ((steps + 2) / 3)) <= 220
+    D: return_value == 5 * ((steps + 2) / 3)
+
+[fsf_5]
+    T: steps >= 0 && steps <= 200 && quota > 200 && quota <= 500 && boost >= 0 && boost <= 200 && (5 * ((steps + 2) / 3)) > 220
+    D: return_value == 220
+
+[fsf_6]
+    T: steps > 200 && steps <= 500 && quota >= 0 && quota <= 200 && boost >= 0 && boost <= 200 && (3 * ((steps + 2) / 3)) <= 220
+    D: return_value == 3 * ((steps + 2) / 3)
+
+[fsf_7]
+    T: steps > 200 && steps <= 500 && quota >= 0 && quota <= 200 && boost >= 0 && boost <= 200 && (3 * ((steps + 2) / 3)) > 220
+    D: return_value == 220
+
+[fsf_8]
+    T: steps >= 0 && steps <= 200 && quota >= 0 && quota <= 200 && boost > 200 && boost <= 500 && (5 * ((steps + 2) / 3)) <= 220
+    D: return_value == 5 * ((steps + 2) / 3)
+
+[fsf_9]
+    T: steps >= 0 && steps <= 200 && quota >= 0 && quota <= 200 && boost > 200 && boost <= 500 && (5 * ((steps + 2) / 3)) > 220
+    D: return_value == 220

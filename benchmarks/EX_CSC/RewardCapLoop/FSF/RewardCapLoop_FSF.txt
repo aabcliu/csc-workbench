@@ -1,0 +1,27 @@
+[fsf_1]
+T: points < 0 || points > 110 || rounds < 0 || rounds > 16
+D: return_value == -1
+
+[fsf_2]
+T: points >= 0 && points < 70 && rounds >= 0 && rounds <= 16 && fast == false && points + rounds <= 120
+D: return_value == points + rounds
+
+[fsf_3]
+T: points >= 0 && points < 70 && rounds >= 0 && rounds <= 16 && fast == false && points + rounds > 120
+D: return_value == 120
+
+[fsf_4]
+T: points >= 0 && points < 70 && rounds >= 0 && rounds <= 16 && fast == true && points + 4 * rounds <= 120
+D: return_value == points + 4 * rounds
+
+[fsf_5]
+T: points >= 0 && points < 70 && rounds >= 0 && rounds <= 16 && fast == true && points + 4 * rounds > 120
+D: return_value == 120
+
+[fsf_6]
+T: points >= 70 && points <= 110 && rounds >= 0 && rounds <= 16 && points + rounds <= 120
+D: return_value == points + rounds
+
+[fsf_7]
+T: points >= 70 && points <= 110 && rounds >= 0 && rounds <= 16 && points + rounds > 120
+D: return_value == 120

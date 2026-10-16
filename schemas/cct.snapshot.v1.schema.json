@@ -1,0 +1,445 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://csc-workbench.local/schemas/cct.snapshot.v1.schema.json",
+  "title": "CCT Snapshot v1",
+  "description": "Stable semantic index for a persisted Condition Case Tree.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "version",
+    "className",
+    "config",
+    "rootNodeId",
+    "nodes",
+    "edges"
+  ],
+  "properties": {
+    "format": {
+      "const": "cct.snapshot"
+    },
+    "version": {
+      "const": 1
+    },
+    "className": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Java simple class name, without a path, package prefix, or .java suffix."
+    },
+    "config": {
+      "$ref": "#/$defs/config"
+    },
+    "rootNodeId": {
+      "const": "n:root"
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/conditionNode"
+          },
+          {
+            "$ref": "#/$defs/leafNode"
+          }
+        ]
+      }
+    },
+    "edges": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    }
+  },
+  "$defs": {
+    "nodeId": {
+      "type": "string",
+      "pattern": "^n:root(?:\\.[FT])*$"
+    },
+    "edgeId": {
+      "type": "string",
+      "pattern": "^e:root(?:\\.[FT])+$"
+    },
+    "config": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "loopOccurrenceBound",
+        "inputIntervals"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "original",
+            "expanded"
+          ]
+        },
+        "loopOccurrenceBound": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "inputIntervals": {
+          "type": "object",
+          "propertyNames": {
+            "minLength": 1
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/closedIntegerInterval"
+          }
+        }
+      }
+    },
+    "closedIntegerInterval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "min",
+        "max"
+      ],
+      "properties": {
+        "min": {
+          "type": "integer"
+        },
+        "max": {
+          "type": "integer"
+        }
+      },
+      "description": "Inclusive integer interval. Exporter validation additionally enforces min <= max."
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "line",
+        "expression",
+        "inputConstraint",
+        "occurrence"
+      ],
+      "properties": {
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "expression": {
+          "type": "string"
+        },
+        "inputConstraint": {
+          "type": "string"
+        },
+        "occurrence": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "conditionResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "condition",
+        "outcome"
+      ],
+      "properties": {
+        "condition": {
+          "$ref": "#/$defs/condition"
+        },
+        "outcome": {
+          "type": "boolean"
+        }
+      }
+    },
+    "nonEmptyConditionResultSequence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/conditionResult"
+      }
+    },
+    "conditionNode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "condition",
+        "expanded"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nodeId"
+        },
+        "kind": {
+          "const": "condition"
+        },
+        "condition": {
+          "$ref": "#/$defs/condition"
+        },
+        "expanded": {
+          "type": "boolean"
+        }
+      }
+    },
+    "leafNode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "kind",
+        "leafType",
+        "testCaseIds",
+        "inputsByTestCase",
+        "truncatedRemainder",
+        "truncatedRemaindersByTestCase",
+        "tbfvFailuresByTestCase",
+        "expanded"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/nodeId"
+        },
+        "kind": {
+          "const": "leaf"
+        },
+        "leafType": {
+          "enum": [
+            "concrete",
+            "infeasible",
+            "range_excluded"
+          ]
+        },
+        "testCaseIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "inputsByTestCase": {
+          "type": "object",
+          "propertyNames": {
+            "minLength": 1
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/testInputs"
+          }
+        },
+        "truncatedRemainder": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/nonEmptyConditionResultSequence"
+            }
+          ]
+        },
+        "truncatedRemaindersByTestCase": {
+          "type": "object",
+          "propertyNames": {
+            "minLength": 1
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/nonEmptyConditionResultSequence"
+          }
+        },
+        "tbfvFailuresByTestCase": {
+          "type": "object",
+          "propertyNames": {
+            "minLength": 1
+          },
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/$defs/tbfvFailure"
+            }
+          }
+        },
+        "expanded": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "leafType": {
+                "const": "concrete"
+              }
+            },
+            "required": [
+              "leafType"
+            ]
+          },
+          "then": {
+            "properties": {
+              "testCaseIds": {
+                "minItems": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "testCaseIds": {
+                "maxItems": 0
+              },
+              "inputsByTestCase": {
+                "maxProperties": 0
+              },
+              "truncatedRemainder": {
+                "type": "null"
+              },
+              "truncatedRemaindersByTestCase": {
+                "maxProperties": 0
+              },
+              "tbfvFailuresByTestCase": {
+                "maxProperties": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "testInputs": {
+      "type": "object",
+      "propertyNames": {
+        "minLength": 1
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/jsonScalar"
+      }
+    },
+    "jsonScalar": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "jsonValue": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/jsonScalar"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        }
+      ]
+    },
+    "tbfvFailure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fsfId",
+        "counterexample",
+        "formula",
+        "reason"
+      ],
+      "properties": {
+        "fsfId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "counterexample": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/jsonValue"
+          }
+        },
+        "formula": {
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "T": {
+          "type": "string"
+        },
+        "D": {
+          "type": "string"
+        }
+      }
+    },
+    "edge": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/materializedEdge"
+        },
+        {
+          "$ref": "#/$defs/unallocatedEdge"
+        }
+      ]
+    },
+    "materializedEdge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sourceNodeId",
+        "outcome",
+        "allocation",
+        "targetNodeId"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/edgeId"
+        },
+        "sourceNodeId": {
+          "$ref": "#/$defs/nodeId"
+        },
+        "outcome": {
+          "type": "boolean"
+        },
+        "allocation": {
+          "const": "materialized"
+        },
+        "targetNodeId": {
+          "$ref": "#/$defs/nodeId"
+        }
+      }
+    },
+    "unallocatedEdge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sourceNodeId",
+        "outcome",
+        "allocation",
+        "targetNodeId"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/edgeId"
+        },
+        "sourceNodeId": {
+          "$ref": "#/$defs/nodeId"
+        },
+        "outcome": {
+          "type": "boolean"
+        },
+        "allocation": {
+          "const": "unallocated"
+        },
+        "targetNodeId": {
+          "type": "null"
+        }
+      }
+    }
+  }
+}

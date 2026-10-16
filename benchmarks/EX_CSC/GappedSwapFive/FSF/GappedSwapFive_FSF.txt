@@ -1,0 +1,3 @@
+[fsf_1]
+T: true
+D: return_value == true

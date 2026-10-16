@@ -1,0 +1,11 @@
+[fsf_1]
+T: base < -100 || base > 100 || distance < -50 || distance > 50
+D: return_value == -1
+
+[fsf_2]
+T: base >= -100 && base <= 100 && distance >= -50 && distance <= 50 && express == false
+D: return_value == base + distance
+
+[fsf_3]
+T: base >= -100 && base <= 100 && distance >= -50 && distance <= 50 && express == true
+D: return_value == base + 2 * distance

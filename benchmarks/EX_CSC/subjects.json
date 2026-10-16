@@ -1,0 +1,831 @@
+{
+  "name": "EX_CSC",
+  "subjects": [
+    {
+      "subject": "AddLoop",
+      "original": "AddLoop/AddLoop.java",
+      "fsf": "AddLoop/FSF/AddLoop_FSF.txt",
+      "mutants": [
+        "AddLoop/AddLoop_M1.java",
+        "AddLoop/AddLoop_M2.java",
+        "AddLoop/AddLoop_M3.java",
+        "AddLoop/AddLoop_M4.java",
+        "AddLoop/AddLoop_M5.java",
+        "AddLoop/AddLoop_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "BoundaryStressCounter",
+      "original": "BoundaryStressCounter/BoundaryStressCounter.java",
+      "fsf": "BoundaryStressCounter/FSF/BoundaryStressCounter_FSF.txt",
+      "mutants": [
+        "BoundaryStressCounter/BoundaryStressCounter_M1.java",
+        "BoundaryStressCounter/BoundaryStressCounter_M2.java",
+        "BoundaryStressCounter/BoundaryStressCounter_M3.java",
+        "BoundaryStressCounter/BoundaryStressCounter_M4.java",
+        "BoundaryStressCounter/BoundaryStressCounter_M5.java",
+        "BoundaryStressCounter/BoundaryStressCounter_M8.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "BoundaryStressMeter",
+      "original": "BoundaryStressMeter/BoundaryStressMeter.java",
+      "fsf": "BoundaryStressMeter/FSF/BoundaryStressMeter_FSF.txt",
+      "mutants": [
+        "BoundaryStressMeter/BoundaryStressMeter_M1.java",
+        "BoundaryStressMeter/BoundaryStressMeter_M2.java",
+        "BoundaryStressMeter/BoundaryStressMeter_M3.java",
+        "BoundaryStressMeter/BoundaryStressMeter_M4.java",
+        "BoundaryStressMeter/BoundaryStressMeter_M5.java",
+        "BoundaryStressMeter/BoundaryStressMeter_M8.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "BoundedAbundantNumber",
+      "original": "BoundedAbundantNumber/BoundedAbundantNumber.java",
+      "fsf": "BoundedAbundantNumber/FSF/BoundedAbundantNumber_FSF.txt",
+      "mutants": [
+        "BoundedAbundantNumber/BoundedAbundantNumber_M1.java",
+        "BoundedAbundantNumber/BoundedAbundantNumber_M2.java",
+        "BoundedAbundantNumber/BoundedAbundantNumber_M3.java",
+        "BoundedAbundantNumber/BoundedAbundantNumber_M4.java",
+        "BoundedAbundantNumber/BoundedAbundantNumber_M5.java",
+        "BoundedAbundantNumber/BoundedAbundantNumber_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived number-theory predicate loop",
+        "source_inspiration": [
+          "TheAlgorithms Java AbundantNumber.isAbundant"
+        ],
+        "adaptation_summary": "Converted to bounded scalar input [1,50], preserved divisor accumulation loop, removed unsupported helper structure, returned compact semantic class."
+      }
+    },
+    {
+      "subject": "BoundedAliquotClassifier",
+      "original": "BoundedAliquotClassifier/BoundedAliquotClassifier.java",
+      "fsf": "BoundedAliquotClassifier/FSF/BoundedAliquotClassifier_FSF.txt",
+      "mutants": [
+        "BoundedAliquotClassifier/BoundedAliquotClassifier_M1.java",
+        "BoundedAliquotClassifier/BoundedAliquotClassifier_M2.java",
+        "BoundedAliquotClassifier/BoundedAliquotClassifier_M3.java",
+        "BoundedAliquotClassifier/BoundedAliquotClassifier_M4.java",
+        "BoundedAliquotClassifier/BoundedAliquotClassifier_M5.java",
+        "BoundedAliquotClassifier/BoundedAliquotClassifier_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived proper-divisor classifier",
+        "source_inspiration": [
+          "TheAlgorithms Java AliquotSum",
+          "TheAlgorithms Java SociableNumber"
+        ],
+        "adaptation_summary": "Preserved proper-divisor accumulation and returned deficient/perfect/abundant class over a bounded scalar input."
+      }
+    },
+    {
+      "subject": "BoundedBinaryPalindromeClassifier",
+      "original": "BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier.java",
+      "fsf": "BoundedBinaryPalindromeClassifier/FSF/BoundedBinaryPalindromeClassifier_FSF.txt",
+      "mutants": [
+        "BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M1.java",
+        "BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M2.java",
+        "BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M3.java",
+        "BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M4.java",
+        "BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M5.java",
+        "BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived bit/palindrome classifier",
+        "source_inspiration": [
+          "TheAlgorithms Java BinaryPalindromeCheck",
+          "TheAlgorithms Java PalindromeNumber"
+        ],
+        "adaptation_summary": "Converted binary palindromicity to a fixed-width 7-bit scalar comparison loop."
+      }
+    },
+    {
+      "subject": "BoundedBitTransitionClassifier",
+      "original": "BoundedBitTransitionClassifier/BoundedBitTransitionClassifier.java",
+      "fsf": "BoundedBitTransitionClassifier/FSF/BoundedBitTransitionClassifier_FSF.txt",
+      "mutants": [
+        "BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M1.java",
+        "BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M2.java",
+        "BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M3.java",
+        "BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M4.java",
+        "BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M5.java",
+        "BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived bit-counting classifier",
+        "source_inspiration": [
+          "TheAlgorithms Java CountSetBits",
+          "TheAlgorithms Java ParityCheck"
+        ],
+        "adaptation_summary": "Scans fixed-width 7-bit representation and classifies adjacent bit-transition count."
+      }
+    },
+    {
+      "subject": "BoundedDivisorCountClassifier",
+      "original": "BoundedDivisorCountClassifier/BoundedDivisorCountClassifier.java",
+      "fsf": "BoundedDivisorCountClassifier/FSF/BoundedDivisorCountClassifier_FSF.txt",
+      "mutants": [
+        "BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M1.java",
+        "BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M2.java",
+        "BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M3.java",
+        "BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M4.java",
+        "BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M5.java",
+        "BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived divisor-count classifier",
+        "source_inspiration": [
+          "TheAlgorithms Java PrimeCheck",
+          "TheAlgorithms Java PerfectNumber"
+        ],
+        "adaptation_summary": "Counts all divisors over a bounded scalar input and returns low/medium/high divisor-density class."
+      }
+    },
+    {
+      "subject": "BoundedEvilNumber",
+      "original": "BoundedEvilNumber/BoundedEvilNumber.java",
+      "fsf": "BoundedEvilNumber/FSF/BoundedEvilNumber_FSF.txt",
+      "mutants": [
+        "BoundedEvilNumber/BoundedEvilNumber_M1.java",
+        "BoundedEvilNumber/BoundedEvilNumber_M2.java",
+        "BoundedEvilNumber/BoundedEvilNumber_M3.java",
+        "BoundedEvilNumber/BoundedEvilNumber_M4.java",
+        "BoundedEvilNumber/BoundedEvilNumber_M5.java",
+        "BoundedEvilNumber/BoundedEvilNumber_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived bit-count classifier loop",
+        "source_inspiration": [
+          "TheAlgorithms Java EvilNumber.isEvilNumber"
+        ],
+        "adaptation_summary": "Converted bit counting to division/modulo over [0,100], removed exceptions and helper calls, returned evil/odious class."
+      }
+    },
+    {
+      "subject": "BoundedIntPower",
+      "original": "BoundedIntPower/BoundedIntPower.java",
+      "fsf": "BoundedIntPower/FSF/BoundedIntPower_FSF.txt",
+      "mutants": [
+        "BoundedIntPower/BoundedIntPower_M1.java",
+        "BoundedIntPower/BoundedIntPower_M2.java",
+        "BoundedIntPower/BoundedIntPower_M3.java",
+        "BoundedIntPower/BoundedIntPower_M4.java",
+        "BoundedIntPower/BoundedIntPower_M5.java",
+        "BoundedIntPower/BoundedIntPower_M6.java"
+      ],
+      "license": "Apache-2.0",
+      "provenance": {
+        "source_family": "repository-derived scalar arithmetic loop",
+        "source_inspiration": [
+          "Google Guava IntMath.pow(int b, int k)",
+          "Apache Commons Numbers ArithmeticUtils.pow(int k, int e)"
+        ],
+        "adaptation_summary": "Bounded base to [-5,5] and exponent to [0,8], removed exceptions and overflow helper behavior, preserved scalar repeated multiplication loop, added signedMode branch partition."
+      }
+    },
+    {
+      "subject": "BoundedKrishnamurthyNumber",
+      "original": "BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber.java",
+      "fsf": "BoundedKrishnamurthyNumber/FSF/BoundedKrishnamurthyNumber_FSF.txt",
+      "mutants": [
+        "BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M1.java",
+        "BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M2.java",
+        "BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M3.java",
+        "BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M4.java",
+        "BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M5.java",
+        "BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived digit-factorial classifier loop",
+        "source_inspiration": [
+          "TheAlgorithms Java KrishnamurthyNumber.isKrishnamurthy"
+        ],
+        "adaptation_summary": "Replaced precomputed factorial array with small bounded factorial loop per digit over [1,200], returned Krishnamurthy/non-Krishnamurthy class."
+      }
+    },
+    {
+      "subject": "BoundedPerfectNumber",
+      "original": "BoundedPerfectNumber/BoundedPerfectNumber.java",
+      "fsf": "BoundedPerfectNumber/FSF/BoundedPerfectNumber_FSF.txt",
+      "mutants": [
+        "BoundedPerfectNumber/BoundedPerfectNumber_M1.java",
+        "BoundedPerfectNumber/BoundedPerfectNumber_M2.java",
+        "BoundedPerfectNumber/BoundedPerfectNumber_M3.java",
+        "BoundedPerfectNumber/BoundedPerfectNumber_M4.java",
+        "BoundedPerfectNumber/BoundedPerfectNumber_M5.java",
+        "BoundedPerfectNumber/BoundedPerfectNumber_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived number-theory predicate loop",
+        "source_inspiration": [
+          "TheAlgorithms Java PerfectNumber.isPerfectNumber"
+        ],
+        "adaptation_summary": "Converted to bounded scalar input [1,50], preserved divisor-sum loop, removed unsupported helper structure, returned compact semantic class."
+      }
+    },
+    {
+      "subject": "BoundedPerfectSquareLoop",
+      "original": "BoundedPerfectSquareLoop/BoundedPerfectSquareLoop.java",
+      "fsf": "BoundedPerfectSquareLoop/FSF/BoundedPerfectSquareLoop_FSF.txt",
+      "mutants": [
+        "BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M1.java",
+        "BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M2.java",
+        "BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M3.java",
+        "BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M4.java",
+        "BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M5.java",
+        "BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived perfect-square classifier",
+        "source_inspiration": [
+          "TheAlgorithms Java PerfectSquare",
+          "TheAlgorithms Java FibonacciNumberCheck"
+        ],
+        "adaptation_summary": "Replaces square-root helper calls with a bounded scalar search loop."
+      }
+    },
+    {
+      "subject": "BoundedPopcountDensity",
+      "original": "BoundedPopcountDensity/BoundedPopcountDensity.java",
+      "fsf": "BoundedPopcountDensity/FSF/BoundedPopcountDensity_FSF.txt",
+      "mutants": [
+        "BoundedPopcountDensity/BoundedPopcountDensity_M1.java",
+        "BoundedPopcountDensity/BoundedPopcountDensity_M2.java",
+        "BoundedPopcountDensity/BoundedPopcountDensity_M3.java",
+        "BoundedPopcountDensity/BoundedPopcountDensity_M4.java",
+        "BoundedPopcountDensity/BoundedPopcountDensity_M5.java",
+        "BoundedPopcountDensity/BoundedPopcountDensity_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived bit-counting classifier",
+        "source_inspiration": [
+          "TheAlgorithms Java CountSetBits",
+          "TheAlgorithms Java ParityCheck"
+        ],
+        "adaptation_summary": "Counts one bits with a scalar modulo/division loop and returns low/medium/high density class."
+      }
+    },
+    {
+      "subject": "BoundedPrimeClassifier",
+      "original": "BoundedPrimeClassifier/BoundedPrimeClassifier.java",
+      "fsf": "BoundedPrimeClassifier/FSF/BoundedPrimeClassifier_FSF.txt",
+      "mutants": [
+        "BoundedPrimeClassifier/BoundedPrimeClassifier_M1.java",
+        "BoundedPrimeClassifier/BoundedPrimeClassifier_M2.java",
+        "BoundedPrimeClassifier/BoundedPrimeClassifier_M3.java",
+        "BoundedPrimeClassifier/BoundedPrimeClassifier_M4.java",
+        "BoundedPrimeClassifier/BoundedPrimeClassifier_M5.java",
+        "BoundedPrimeClassifier/BoundedPrimeClassifier_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived number-theory classifier loop",
+        "source_inspiration": [
+          "TheAlgorithms Java PrimeCheck.isPrime"
+        ],
+        "adaptation_summary": "Converted trial division into bounded divisor-count classification over [2,50], removed exceptions and helper calls, returned prime/composite class."
+      }
+    },
+    {
+      "subject": "BoundedPronicNumber",
+      "original": "BoundedPronicNumber/BoundedPronicNumber.java",
+      "fsf": "BoundedPronicNumber/FSF/BoundedPronicNumber_FSF.txt",
+      "mutants": [
+        "BoundedPronicNumber/BoundedPronicNumber_M1.java",
+        "BoundedPronicNumber/BoundedPronicNumber_M2.java",
+        "BoundedPronicNumber/BoundedPronicNumber_M3.java",
+        "BoundedPronicNumber/BoundedPronicNumber_M4.java",
+        "BoundedPronicNumber/BoundedPronicNumber_M5.java",
+        "BoundedPronicNumber/BoundedPronicNumber_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived number-theory predicate loop",
+        "source_inspiration": [
+          "TheAlgorithms Java PronicNumber.isPronic"
+        ],
+        "adaptation_summary": "Converted to bounded scalar input [0,50], preserved bounded factor-search loop, removed unsupported library or object structure, returned compact semantic class."
+      }
+    },
+    {
+      "subject": "BoundedProperDivisorParity",
+      "original": "BoundedProperDivisorParity/BoundedProperDivisorParity.java",
+      "fsf": "BoundedProperDivisorParity/FSF/BoundedProperDivisorParity_FSF.txt",
+      "mutants": [
+        "BoundedProperDivisorParity/BoundedProperDivisorParity_M1.java",
+        "BoundedProperDivisorParity/BoundedProperDivisorParity_M2.java",
+        "BoundedProperDivisorParity/BoundedProperDivisorParity_M3.java",
+        "BoundedProperDivisorParity/BoundedProperDivisorParity_M4.java",
+        "BoundedProperDivisorParity/BoundedProperDivisorParity_M5.java",
+        "BoundedProperDivisorParity/BoundedProperDivisorParity_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived proper-divisor classifier",
+        "source_inspiration": [
+          "TheAlgorithms Java AliquotSum",
+          "TheAlgorithms Java SociableNumber"
+        ],
+        "adaptation_summary": "Preserved proper-divisor accumulation and returned parity of the proper-divisor sum."
+      }
+    },
+    {
+      "subject": "BoundedSquareFreeClassifier",
+      "original": "BoundedSquareFreeClassifier/BoundedSquareFreeClassifier.java",
+      "fsf": "BoundedSquareFreeClassifier/FSF/BoundedSquareFreeClassifier_FSF.txt",
+      "mutants": [
+        "BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M1.java",
+        "BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M2.java",
+        "BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M3.java",
+        "BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M4.java",
+        "BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M5.java",
+        "BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "repository-derived square-free classifier",
+        "source_inspiration": [
+          "TheAlgorithms Java SquareFreeInteger"
+        ],
+        "adaptation_summary": "Replaced collection-based prime-factor storage with a bounded square-divisor scan."
+      }
+    },
+    {
+      "subject": "BubbleSort",
+      "original": "BubbleSort/BubbleSortFive.java",
+      "fsf": "BubbleSort/FSF/BubbleSortFive_FSF.txt",
+      "mutants": [
+        "BubbleSort/BubbleSortFive_M1.java",
+        "BubbleSort/BubbleSortFive_M2.java",
+        "BubbleSort/BubbleSortFive_M3.java",
+        "BubbleSort/BubbleSortFive_M4.java",
+        "BubbleSort/BubbleSortFive_M5.java",
+        "BubbleSort/BubbleSortFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "GappedSwapFive",
+      "original": "GappedSwapFive/GappedSwapFive.java",
+      "fsf": "GappedSwapFive/FSF/GappedSwapFive_FSF.txt",
+      "mutants": [
+        "GappedSwapFive/GappedSwapFive_M1.java",
+        "GappedSwapFive/GappedSwapFive_M2.java",
+        "GappedSwapFive/GappedSwapFive_M3.java",
+        "GappedSwapFive/GappedSwapFive_M4.java",
+        "GappedSwapFive/GappedSwapFive_M5.java",
+        "GappedSwapFive/GappedSwapFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "GradePolicy",
+      "original": "GradePolicy/GradePolicy.java",
+      "fsf": "GradePolicy/FSF/GradePolicy_FSF.txt",
+      "mutants": [
+        "GradePolicy/GradePolicy_M1.java",
+        "GradePolicy/GradePolicy_M2.java",
+        "GradePolicy/GradePolicy_M3.java",
+        "GradePolicy/GradePolicy_M4.java",
+        "GradePolicy/GradePolicy_M5.java",
+        "GradePolicy/GradePolicy_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "InventoryReorder",
+      "original": "InventoryReorder/InventoryReorder.java",
+      "fsf": "InventoryReorder/FSF/InventoryReorder_FSF.txt",
+      "mutants": [
+        "InventoryReorder/InventoryReorder_M1.java",
+        "InventoryReorder/InventoryReorder_M2.java",
+        "InventoryReorder/InventoryReorder_M3.java",
+        "InventoryReorder/InventoryReorder_M4.java",
+        "InventoryReorder/InventoryReorder_M5.java",
+        "InventoryReorder/InventoryReorder_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "LoopBubbleSortFive",
+      "original": "LoopBubbleSortFive/LoopBubbleSortFive.java",
+      "fsf": "LoopBubbleSortFive/FSF/LoopBubbleSortFive_FSF.txt",
+      "mutants": [
+        "LoopBubbleSortFive/LoopBubbleSortFive_M1.java",
+        "LoopBubbleSortFive/LoopBubbleSortFive_M2.java",
+        "LoopBubbleSortFive/LoopBubbleSortFive_M3.java",
+        "LoopBubbleSortFive/LoopBubbleSortFive_M4.java",
+        "LoopBubbleSortFive/LoopBubbleSortFive_M5.java",
+        "LoopBubbleSortFive/LoopBubbleSortFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "LoopSelectionSortFive",
+      "original": "LoopSelectionSortFive/LoopSelectionSortFive.java",
+      "fsf": "LoopSelectionSortFive/FSF/LoopSelectionSortFive_FSF.txt",
+      "mutants": [
+        "LoopSelectionSortFive/LoopSelectionSortFive_M1.java",
+        "LoopSelectionSortFive/LoopSelectionSortFive_M2.java",
+        "LoopSelectionSortFive/LoopSelectionSortFive_M3.java",
+        "LoopSelectionSortFive/LoopSelectionSortFive_M4.java",
+        "LoopSelectionSortFive/LoopSelectionSortFive_M5.java",
+        "LoopSelectionSortFive/LoopSelectionSortFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "MarginAdjustLoop",
+      "original": "MarginAdjustLoop/MarginAdjustLoop.java",
+      "fsf": "MarginAdjustLoop/FSF/MarginAdjustLoop_FSF.txt",
+      "mutants": [
+        "MarginAdjustLoop/MarginAdjustLoop_M1.java",
+        "MarginAdjustLoop/MarginAdjustLoop_M2.java",
+        "MarginAdjustLoop/MarginAdjustLoop_M3.java",
+        "MarginAdjustLoop/MarginAdjustLoop_M4.java",
+        "MarginAdjustLoop/MarginAdjustLoop_M5.java",
+        "MarginAdjustLoop/MarginAdjustLoop_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "MaxOfFive",
+      "original": "MaxOfFive/MaxOfFive.java",
+      "fsf": "MaxOfFive/FSF/MaxOfFive_FSF.txt",
+      "mutants": [
+        "MaxOfFive/MaxOfFive_M1.java",
+        "MaxOfFive/MaxOfFive_M2.java",
+        "MaxOfFive/MaxOfFive_M3.java",
+        "MaxOfFive/MaxOfFive_M4.java",
+        "MaxOfFive/MaxOfFive_M5.java",
+        "MaxOfFive/MaxOfFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "MedianOfSix",
+      "original": "MedianOfSix/MedianOfSix.java",
+      "fsf": "MedianOfSix/FSF/MedianOfSix_FSF.txt",
+      "mutants": [
+        "MedianOfSix/MedianOfSix_M1.java",
+        "MedianOfSix/MedianOfSix_M2.java",
+        "MedianOfSix/MedianOfSix_M3.java",
+        "MedianOfSix/MedianOfSix_M4.java",
+        "MedianOfSix/MedianOfSix_M5.java",
+        "MedianOfSix/MedianOfSix_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "MedianWindowFive",
+      "original": "MedianWindowFive/MedianWindowFive.java",
+      "fsf": "MedianWindowFive/FSF/MedianWindowFive_FSF.txt",
+      "mutants": [
+        "MedianWindowFive/MedianWindowFive_M1.java",
+        "MedianWindowFive/MedianWindowFive_M2.java",
+        "MedianWindowFive/MedianWindowFive_M3.java",
+        "MedianWindowFive/MedianWindowFive_M4.java",
+        "MedianWindowFive/MedianWindowFive_M5.java",
+        "MedianWindowFive/MedianWindowFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "OddEvenSortFive",
+      "original": "OddEvenSortFive/OddEvenSortFive.java",
+      "fsf": "OddEvenSortFive/FSF/OddEvenSortFive_FSF.txt",
+      "mutants": [
+        "OddEvenSortFive/OddEvenSortFive_M1.java",
+        "OddEvenSortFive/OddEvenSortFive_M2.java",
+        "OddEvenSortFive/OddEvenSortFive_M3.java",
+        "OddEvenSortFive/OddEvenSortFive_M4.java",
+        "OddEvenSortFive/OddEvenSortFive_M5.java",
+        "OddEvenSortFive/OddEvenSortFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "PairSortCheck",
+      "original": "PairSortCheck/PairSortCheck.java",
+      "fsf": "PairSortCheck/FSF/PairSortCheck_FSF.txt",
+      "mutants": [
+        "PairSortCheck/PairSortCheck_M1.java",
+        "PairSortCheck/PairSortCheck_M2.java",
+        "PairSortCheck/PairSortCheck_M3.java",
+        "PairSortCheck/PairSortCheck_M4.java",
+        "PairSortCheck/PairSortCheck_M5.java",
+        "PairSortCheck/PairSortCheck_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "RewardCapLoop",
+      "original": "RewardCapLoop/RewardCapLoop.java",
+      "fsf": "RewardCapLoop/FSF/RewardCapLoop_FSF.txt",
+      "mutants": [
+        "RewardCapLoop/RewardCapLoop_M1.java",
+        "RewardCapLoop/RewardCapLoop_M2.java",
+        "RewardCapLoop/RewardCapLoop_M3.java",
+        "RewardCapLoop/RewardCapLoop_M4.java",
+        "RewardCapLoop/RewardCapLoop_M5.java",
+        "RewardCapLoop/RewardCapLoop_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "SaturatedIntPower",
+      "original": "SaturatedIntPower/SaturatedIntPower.java",
+      "fsf": "SaturatedIntPower/FSF/SaturatedIntPower_FSF.txt",
+      "mutants": [
+        "SaturatedIntPower/SaturatedIntPower_M1.java",
+        "SaturatedIntPower/SaturatedIntPower_M2.java",
+        "SaturatedIntPower/SaturatedIntPower_M3.java",
+        "SaturatedIntPower/SaturatedIntPower_M4.java",
+        "SaturatedIntPower/SaturatedIntPower_M5.java",
+        "SaturatedIntPower/SaturatedIntPower_M6.java"
+      ],
+      "license": "Apache-2.0",
+      "provenance": {
+        "source_family": "repository-derived scalar arithmetic loop",
+        "source_inspiration": [
+          "Google Guava IntMath.saturatedPow(int b, int k)"
+        ],
+        "adaptation_summary": "Bounded base to [-5,5] and exponent to [0,7], removed helper calls and bitwise overflow logic, preserved multiplication and final saturation behavior, added highCap branch partition."
+      }
+    },
+    {
+      "subject": "SaturatingPenaltyLoop",
+      "original": "SaturatingPenaltyLoop/SaturatingPenaltyLoop.java",
+      "fsf": "SaturatingPenaltyLoop/FSF/SaturatingPenaltyLoop_FSF.txt",
+      "mutants": [
+        "SaturatingPenaltyLoop/SaturatingPenaltyLoop_M1.java",
+        "SaturatingPenaltyLoop/SaturatingPenaltyLoop_M2.java",
+        "SaturatingPenaltyLoop/SaturatingPenaltyLoop_M3.java",
+        "SaturatingPenaltyLoop/SaturatingPenaltyLoop_M4.java",
+        "SaturatingPenaltyLoop/SaturatingPenaltyLoop_M5.java",
+        "SaturatingPenaltyLoop/SaturatingPenaltyLoop_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "ScoreNormalizer",
+      "original": "ScoreNormalizer/ScoreNormalizer.java",
+      "fsf": "ScoreNormalizer/FSF/ScoreNormalizer_FSF.txt",
+      "mutants": [
+        "ScoreNormalizer/ScoreNormalizer_M1.java",
+        "ScoreNormalizer/ScoreNormalizer_M2.java",
+        "ScoreNormalizer/ScoreNormalizer_M3.java",
+        "ScoreNormalizer/ScoreNormalizer_M4.java",
+        "ScoreNormalizer/ScoreNormalizer_M5.java",
+        "ScoreNormalizer/ScoreNormalizer_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "SelectionSort",
+      "original": "SelectionSort/SelectionSortFive.java",
+      "fsf": "SelectionSort/FSF/SelectionSortFive_FSF.txt",
+      "mutants": [
+        "SelectionSort/SelectionSortFive_M1.java",
+        "SelectionSort/SelectionSortFive_M2.java",
+        "SelectionSort/SelectionSortFive_M3.java",
+        "SelectionSort/SelectionSortFive_M4.java",
+        "SelectionSort/SelectionSortFive_M5.java",
+        "SelectionSort/SelectionSortFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "SubtractLoop",
+      "original": "SubtractLoop/SubtractLoop.java",
+      "fsf": "SubtractLoop/FSF/SubtractLoop_FSF.txt",
+      "mutants": [
+        "SubtractLoop/SubtractLoop_M1.java",
+        "SubtractLoop/SubtractLoop_M2.java",
+        "SubtractLoop/SubtractLoop_M3.java",
+        "SubtractLoop/SubtractLoop_M4.java",
+        "SubtractLoop/SubtractLoop_M5.java",
+        "SubtractLoop/SubtractLoop_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "TailRotateSortFive",
+      "original": "TailRotateSortFive/TailRotateSortFive.java",
+      "fsf": "TailRotateSortFive/FSF/TailRotateSortFive_FSF.txt",
+      "mutants": [
+        "TailRotateSortFive/TailRotateSortFive_M1.java",
+        "TailRotateSortFive/TailRotateSortFive_M2.java",
+        "TailRotateSortFive/TailRotateSortFive_M3.java",
+        "TailRotateSortFive/TailRotateSortFive_M4.java",
+        "TailRotateSortFive/TailRotateSortFive_M5.java",
+        "TailRotateSortFive/TailRotateSortFive_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "TaxBracket",
+      "original": "TaxBracket/TaxBracket.java",
+      "fsf": "TaxBracket/FSF/TaxBracket_FSF.txt",
+      "mutants": [
+        "TaxBracket/TaxBracket_M1.java",
+        "TaxBracket/TaxBracket_M2.java",
+        "TaxBracket/TaxBracket_M3.java",
+        "TaxBracket/TaxBracket_M4.java",
+        "TaxBracket/TaxBracket_M5.java",
+        "TaxBracket/TaxBracket_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "TicketPrice",
+      "original": "TicketPrice/TicketPrice.java",
+      "fsf": "TicketPrice/FSF/TicketPrice_FSF.txt",
+      "mutants": [
+        "TicketPrice/TicketPrice_M1.java",
+        "TicketPrice/TicketPrice_M2.java",
+        "TicketPrice/TicketPrice_M3.java",
+        "TicketPrice/TicketPrice_M4.java",
+        "TicketPrice/TicketPrice_M5.java",
+        "TicketPrice/TicketPrice_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "TwoBucketLoop",
+      "original": "TwoBucketLoop/TwoBucketLoop.java",
+      "fsf": "TwoBucketLoop/FSF/TwoBucketLoop_FSF.txt",
+      "mutants": [
+        "TwoBucketLoop/TwoBucketLoop_M1.java",
+        "TwoBucketLoop/TwoBucketLoop_M2.java",
+        "TwoBucketLoop/TwoBucketLoop_M3.java",
+        "TwoBucketLoop/TwoBucketLoop_M4.java",
+        "TwoBucketLoop/TwoBucketLoop_M5.java",
+        "TwoBucketLoop/TwoBucketLoop_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "WaterBillCaculator",
+      "original": "WaterBillCaculator/WaterBillCaculator.java",
+      "fsf": "WaterBillCaculator/FSF/WaterBillCaculator_FSF.txt",
+      "mutants": [
+        "WaterBillCaculator/WaterBillCaculator_M1.java",
+        "WaterBillCaculator/WaterBillCaculator_M2.java",
+        "WaterBillCaculator/WaterBillCaculator_M3.java",
+        "WaterBillCaculator/WaterBillCaculator_M4.java",
+        "WaterBillCaculator/WaterBillCaculator_M5.java",
+        "WaterBillCaculator/WaterBillCaculator_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    },
+    {
+      "subject": "WeightedAddLoop",
+      "original": "WeightedAddLoop/WeightedAddLoop.java",
+      "fsf": "WeightedAddLoop/FSF/WeightedAddLoop_FSF.txt",
+      "mutants": [
+        "WeightedAddLoop/WeightedAddLoop_M1.java",
+        "WeightedAddLoop/WeightedAddLoop_M2.java",
+        "WeightedAddLoop/WeightedAddLoop_M3.java",
+        "WeightedAddLoop/WeightedAddLoop_M4.java",
+        "WeightedAddLoop/WeightedAddLoop_M5.java",
+        "WeightedAddLoop/WeightedAddLoop_M6.java"
+      ],
+      "license": "MIT",
+      "provenance": {
+        "source_family": "constructed scalar benchmark",
+        "adaptation_summary": "Original benchmark subject with six single-line variants."
+      }
+    }
+  ],
+  "counts": {
+    "originals": 42,
+    "mutants": 252,
+    "specifications": 42
+  },
+  "suggested_configuration": {
+    "mode": "expanded",
+    "range_bound": 200,
+    "max_iter": 30,
+    "strategy": "batch",
+    "workers": 4,
+    "render_cct": false,
+    "localization_formula": "ochiai"
+  }
+}

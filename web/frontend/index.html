@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSC Workbench</title>
+  <link rel="stylesheet" href="/assets/app.css?v=14">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="workbench-navbar">
+      <div class="brand">
+        <span class="brand-mark">CCT</span>
+        <span class="brand-title">CSC Workbench</span>
+        <span class="brand-badge">Automated Testing &amp; Verification</span>
+      </div>
+      <div class="navbar-actions">
+        <button id="health-indicator" class="navbar-status-button" type="button" title="View environment diagnostics">
+          <span id="health-dot" class="status-dot"></span>
+          <span id="health-label">Checking environment</span>
+        </button>
+        <button id="nav-history-button" class="secondary-button compact" type="button" title="Browse and restore past analysis runs">Import History</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="pipeline-view" class="view active">
+        <section class="band workspace-band">
+          <div class="section-heading">
+            <div>
+              <h2>Program Input</h2>
+              <p id="workspace-summary">No program added</p>
+            </div>
+            <div class="program-actions">
+              <button id="view-program-source" class="secondary-button hidden" type="button" title="View Java source code and FSF specification">View Code &amp; FSF</button>
+              <button id="open-history" class="secondary-button" type="button">Import history</button>
+              <button id="toggle-import" class="primary-button" type="button">Add program</button>
+            </div>
+          </div>
+          <form id="workspace-form" class="input-composer hidden">
+            <header class="input-composer-header">
+              <div>
+                <h3>Prepare an analysis input</h3>
+                <p>Paste a quick example or use files you already have.</p>
+              </div>
+              <button id="close-import" class="icon-button" type="button" aria-label="Close input panel">×</button>
+            </header>
+
+            <div class="input-mode-tabs" role="tablist" aria-label="Program input method">
+              <button class="input-mode-tab active" type="button" role="tab" aria-selected="true"
+                      aria-controls="paste-input-panel" data-input-mode="paste">Paste code</button>
+              <button class="input-mode-tab" type="button" role="tab" aria-selected="false"
+                      aria-controls="upload-input-panel" data-input-mode="upload">Upload files</button>
+            </div>
+
+            <div id="paste-input-panel" class="input-mode-panel source-input-grid" role="tabpanel" data-input-panel="paste">
+              <label class="source-field">
+                <span class="source-field-heading">
+                  <span>Java source <strong>Required</strong></span>
+                  <span id="detected-class" class="detected-class">Class name will be detected</span>
+                </span>
+                <textarea id="java-source" name="java_source" rows="15" spellcheck="false"
+                          placeholder="public class Example {&#10;    public static int evaluate(int x) {&#10;        return x > 0 ? 1 : 0;&#10;    }&#10;}"></textarea>
+              </label>
+              <section class="fsf-builder" aria-labelledby="fsf-builder-title">
+                <header class="fsf-builder-header">
+                  <div>
+                    <h4 id="fsf-builder-title">FSF <em>Optional</em></h4>
+                    <p id="fsf-builder-summary">Each row defines one T/D pair.</p>
+                  </div>
+                  <div class="fsf-builder-actions">
+                    <label class="fsf-import-button" for="fsf-inline-file">Import .txt</label>
+                    <input id="fsf-inline-file" type="file" accept=".txt,text/plain" hidden>
+                    <button id="add-fsf-row" class="fsf-add-button" type="button">+ Add pair</button>
+                  </div>
+                </header>
+
+                <div class="fsf-variable-guide">
+                  <span>Inputs available to T</span>
+                  <div id="fsf-parameter-chips" class="fsf-parameter-chips" aria-live="polite">
+                    <span class="fsf-parameter-empty">Paste Java code to detect inputs</span>
+                  </div>
+                  <small>T may reference input variables only. Click a variable to insert it.</small>
+                </div>
+
+                <div id="fsf-rows" class="fsf-rows" aria-label="FSF condition pairs"></div>
+                <textarea id="fsf-source" name="fsf_source" hidden></textarea>
+              </section>
+            </div>
+
+            <div id="upload-input-panel" class="input-mode-panel upload-input-grid hidden" role="tabpanel" data-input-panel="upload">
+              <label>
+                <span class="field-label-row"><span>Java file</span><span>Required · .java</span></span>
+                <span class="file-picker">
+                  <input name="java_file" type="file" accept=".java" title="Choose Java file">
+                  <span class="file-picker-action" aria-hidden="true">Choose file</span>
+                  <span class="file-picker-name" aria-live="polite">No file selected</span>
+                </span>
+              </label>
+              <label>
+                <span class="field-label-row"><span>FSF file</span><span>Optional · .txt</span></span>
+                <span class="file-picker">
+                  <input name="fsf_file" type="file" accept=".txt" title="Choose FSF file">
+                  <span class="file-picker-action" aria-hidden="true">Choose file</span>
+                  <span class="file-picker-name" aria-live="polite">No file selected</span>
+                </span>
+              </label>
+            </div>
+
+            <section class="program-example-picker" aria-labelledby="program-example-title">
+              <div class="program-example-controls">
+                <label for="program-example" id="program-example-title">Try an example</label>
+                <select id="program-example" aria-describedby="program-example-description program-example-note"></select>
+                <button id="load-program-example" class="secondary-button" type="button">Load example</button>
+              </div>
+              <p id="program-example-description" aria-live="polite"></p>
+              <small id="program-example-note">Loads Java and FSF together, replacing the current draft inputs. You can edit them before use.</small>
+            </section>
+
+            <footer class="input-composer-footer">
+              <p>Your program and FSF will be used throughout the analysis.</p>
+              <button type="submit" class="primary-button">Use this program</button>
+            </footer>
+          </form>
+        </section>
+
+        <div class="analysis-workspace">
+        <section class="workflow-band" aria-labelledby="workflow-heading">
+          <header class="workflow-heading">
+            <div>
+              <span class="result-eyebrow">Workflow</span>
+              <h2 id="workflow-heading">Analysis steps</h2>
+              <p>Run each stage in sequence.</p>
+            </div>
+          </header>
+
+          <ol class="workflow-list">
+            <li id="csc-stage" class="workflow-step is-ready" data-workflow-kind="csc">
+              <div class="workflow-marker"><span>1</span></div>
+              <div class="workflow-step-body">
+                <div class="workflow-step-header">
+                  <div>
+                    <div class="workflow-title-row">
+                      <h3>Test Generation</h3>
+                      <span class="method-help">
+                        <button class="method-help-trigger" type="button" aria-label="About test generation" aria-expanded="false">?</button>
+                        <span class="method-help-popover" role="tooltip"><strong>CSC test generation</strong><span>Builds a Condition Case Tree (CCT) and generates inputs that exercise its paths and boundary conditions.</span></span>
+                      </span>
+                    </div>
+                    <p>Generate test cases and build the initial CCT.</p>
+                  </div>
+                  <div class="workflow-action">
+                    <span id="csc-step-state" class="workflow-state">Add a program to begin</span>
+                    <span class="workflow-buttons">
+                      <button class="configuration-button compact-settings-button" type="button" data-open-stage="csc" title="Test Generation settings" aria-label="Test Generation settings" disabled><span aria-hidden="true">⚙</span></button>
+                      <button id="run-csc" class="primary-button" type="button">Generate Tests</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li id="tbfv-stage" class="workflow-step is-locked" data-workflow-kind="tbfv">
+              <div class="workflow-marker"><span>2</span></div>
+              <div class="workflow-step-body">
+                <div class="workflow-step-header">
+                  <div>
+                    <div class="workflow-title-row">
+                      <h3>Verification</h3>
+                      <span class="method-help">
+                        <button class="method-help-trigger" type="button" aria-label="About verification" aria-expanded="false">?</button>
+                        <span class="method-help-popover" role="tooltip"><strong>Refined TBFV</strong><span>Checks generated tests against the FSF and marks verification failures back onto the CCT.</span></span>
+                      </span>
+                    </div>
+                    <p id="tbfv-source">Complete Test Generation to unlock this step.</p>
+                  </div>
+                  <div class="workflow-action">
+                    <span id="tbfv-step-state" class="workflow-state">Waiting for generated tests</span>
+                    <span class="workflow-buttons">
+                      <button class="configuration-button hidden" type="button" data-open-stage="tbfv">Configuration</button>
+                      <button id="run-tbfv" class="primary-button" type="button" disabled>Run Verification</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li id="localization-stage" class="workflow-step is-locked" data-workflow-kind="localization">
+              <div class="workflow-marker"><span>3</span></div>
+              <div class="workflow-step-body">
+                <div class="workflow-step-header">
+                  <div>
+                    <div class="workflow-title-row">
+                      <h3>Fault Localization</h3>
+                      <span class="method-help">
+                        <button class="method-help-trigger" type="button" aria-label="About fault localization" aria-expanded="false">?</button>
+                        <span class="method-help-popover" role="tooltip"><strong>Spectrum-based fault localization</strong><span>Ranks source lines using coverage from passing and failing verified tests.</span></span>
+                      </span>
+                    </div>
+                    <p id="localization-source">Complete Verification to unlock this step.</p>
+                  </div>
+                  <div class="workflow-action">
+                    <span id="localization-step-state" class="workflow-state">Waiting for verification</span>
+                    <span class="workflow-buttons">
+                      <button class="configuration-button hidden" type="button" data-open-stage="localization">Configuration</button>
+                      <button id="run-localization" class="primary-button" type="button" disabled>Locate Faults</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <section class="result-band" aria-labelledby="result-heading">
+          <header class="result-header">
+            <div class="result-heading-group">
+              <span class="result-eyebrow">Analysis result</span>
+              <h2 id="result-heading">Condition Case Tree (CCT)</h2>
+              <p id="selected-job-label">Run an analysis or import one from saved history.</p>
+            </div>
+            <div class="result-actions">
+              <div id="job-status" class="job-status empty" role="status">No result</div>
+              <div id="outcome-badge" class="outcome-badge tone-muted hidden" role="status"></div>
+              <button id="cancel-job" class="danger-button hidden">Cancel</button>
+            </div>
+          </header>
+          <div class="result-view-switcher hidden">
+            <span class="result-view-hint">Switch CCT view</span>
+            <div class="result-view-tabs" role="tablist" aria-label="Analysis result view">
+              <button class="result-view-tab hidden" type="button" role="tab" aria-selected="false" data-result-kind="csc"><span>1</span>Test Generation</button>
+              <button class="result-view-tab hidden" type="button" role="tab" aria-selected="false" data-result-kind="tbfv"><span>2</span>Verification</button>
+              <button class="result-view-tab hidden" type="button" role="tab" aria-selected="false" data-result-kind="localization"><span>3</span>Fault Localization</button>
+            </div>
+          </div>
+          <div id="result-display-modes" class="result-display-bar hidden">
+            <span class="result-display-hint">Workbench view</span>
+            <div class="result-display-tabs" role="tablist" aria-label="Workbench view section">
+              <button id="view-mode-all" class="result-display-tab active" type="button" role="tab" aria-selected="true" data-display-mode="all">
+                <span class="tab-icon" aria-hidden="true">☰</span> Overview
+              </button>
+              <button id="view-mode-tree" class="result-display-tab" type="button" role="tab" aria-selected="false" data-display-mode="tree">
+                <span class="tab-icon" aria-hidden="true">🌳</span> CCT Tree
+              </button>
+              <button id="view-mode-evidence" class="result-display-tab hidden" type="button" role="tab" aria-selected="false" data-display-mode="evidence">
+                <span class="tab-icon" aria-hidden="true">🔍</span> Diagnostic Evidence
+              </button>
+              <button id="view-mode-metrics" class="result-display-tab" type="button" role="tab" aria-selected="false" data-display-mode="metrics">
+                <span class="tab-icon" aria-hidden="true">📊</span> Conclusion &amp; Metrics
+              </button>
+            </div>
+          </div>
+          <div id="result-placeholder" class="result-placeholder">
+            <div class="result-placeholder-mark" aria-hidden="true">CCT</div>
+            <div class="result-placeholder-copy">
+              <h3>No analysis result selected</h3>
+              <p>Generate tests to create an interactive tree, or import a completed task from saved history.</p>
+              <div id="run-monitor" class="run-monitor hidden" aria-live="polite">
+                <div class="run-progress-track" aria-hidden="true"><span></span></div>
+                <div class="run-monitor-meta">
+                  <span class="run-worker-state"><i></i><span id="run-activity">Analysis worker active</span></span>
+                  <time id="run-elapsed">00:00</time>
+                </div>
+                <div class="run-signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </div>
+          <section id="cct-view-panel" class="cct-view-panel hidden" aria-label="Interactive CCT result">
+            <header class="cct-toolbar">
+              <div class="cct-toolbar-meta">
+                <h3 id="cct-view-title">CCT result</h3>
+                <p id="cct-view-subtitle">Interactive tree view</p>
+              </div>
+              <div class="cct-controls" aria-label="CCT view controls">
+                <label>
+                  Layout
+                  <select id="cct-layout-select" aria-label="CCT layout direction">
+                    <option value="TB">Top-down</option>
+                    <option value="LR">Left-right</option>
+                  </select>
+                </label>
+                <button id="cct-zoom-out" class="icon-button" type="button" aria-label="Zoom out">−</button>
+                <button id="cct-zoom-in" class="icon-button" type="button" aria-label="Zoom in">+</button>
+                <button id="cct-fit" class="secondary-button" type="button">Fit</button>
+                <button id="cct-root" class="secondary-button" type="button" title="Jump to root condition node">Root</button>
+                <button id="cct-next-failure" class="secondary-button" type="button" disabled title="No verification failures in current CCT">Next Failure <span id="cct-failure-badge" class="failure-count-badge is-zero">0</span></button>
+                <button id="cct-view-source" class="secondary-button" type="button" title="View Java source code and FSF specification">👁 View Code &amp; FSF</button>
+                <button id="cct-maximize" class="secondary-button cct-maximize-button" type="button" aria-pressed="false" title="Expand CCT workspace"><span aria-hidden="true">⛶</span><span class="cct-maximize-label">Expand</span></button>
+              </div>
+            </header>
+            <div class="cct-workspace">
+              <div class="cct-canvas-wrap">
+                <svg id="cct-canvas" class="cct-canvas" role="img" aria-labelledby="cct-svg-title cct-svg-description">
+                  <title id="cct-svg-title">Interactive Condition Case Tree (CCT)</title>
+                  <desc id="cct-svg-description">Systematic Condition Case Tree tracking explored program paths, condition allocations, and verification outcomes.</desc>
+                  <g id="cct-world">
+                    <g id="cct-links"></g>
+                    <g id="cct-edge-labels"></g>
+                    <g id="cct-nodes"></g>
+                  </g>
+                </svg>
+                <div class="cct-legend" aria-hidden="true">
+                  <span><i class="legend-condition"></i>Condition</span>
+                  <span><i class="legend-covered"></i>Covered</span>
+                  <span><i class="legend-failure"></i>Failure</span>
+                  <span><i class="legend-range"></i>Range excluded</span>
+                </div>
+                <div class="cct-legend cct-risk-legend hidden" aria-hidden="true">
+                  <span class="risk-legend-title">SBFL risk</span>
+                  <span><i class="legend-risk is-tier-1"></i>Low</span>
+                  <span><i class="legend-risk is-tier-2"></i>Medium</span>
+                  <span><i class="legend-risk is-tier-3"></i>High</span>
+                  <span><i class="legend-risk is-tier-4"></i>Top</span>
+                </div>
+              </div>
+              <aside id="cct-inspector" class="cct-inspector" aria-live="polite">
+                <p class="cct-empty-state">Select a node or edge.</p>
+              </aside>
+            </div>
+          </section>
+          <section id="outcome-summary" class="outcome-summary hidden" aria-labelledby="outcome-summary-title">
+            <header class="outcome-summary-header">
+              <div>
+                <span class="result-eyebrow">Analysis conclusion</span>
+                <h3 id="outcome-summary-title">Outcome summary</h3>
+              </div>
+            </header>
+            <div id="outcome-body" aria-live="polite" class="outcome-body"></div>
+          </section>
+          <section id="evidence-summary" class="evidence-summary hidden" aria-label="Diagnostic evidence"></section>
+          <section id="metrics-summary" class="metrics-summary hidden" aria-labelledby="metrics-summary-title">
+            <header class="metrics-summary-header">
+              <div>
+                <span class="result-eyebrow">Analysis metrics</span>
+                <h3 id="metrics-summary-title">Metric summary</h3>
+              </div>
+            </header>
+            <div id="metrics-cards" class="metrics-grid" aria-live="polite"></div>
+          </section>
+        </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="csc-dialog" class="analysis-dialog" aria-labelledby="csc-dialog-title">
+    <header class="dialog-header">
+      <div><span id="csc-dialog-step" class="dialog-step">Step 1</span><h2 id="csc-dialog-title">Configure Test Generation</h2><p id="csc-dialog-description">Set the generation mode and strategy.</p></div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+    </header>
+    <div id="csc-readonly-note" class="dialog-readonly-note hidden"><strong>Read-only configuration</strong><span>These values belong to an existing run and cannot be changed retroactively.</span></div>
+    <form id="csc-form" class="dialog-settings">
+      <label>Mode<select name="mode"><option value="expanded">CSC + Boundary</option><option value="original">CSC</option></select></label>
+      <label>Strategy<select name="strategy"><option value="batch">Batch</option><option value="sequential">Sequential</option></select></label>
+      <p id="csc-mode-note" class="dialog-note dialog-wide"></p>
+      <section data-csc-field="input-domains" class="dialog-wide input-domains" aria-labelledby="input-domains-title">
+        <div class="input-domain-heading"><strong id="input-domains-title">Boundary expansion ranges</strong><button id="reset-input-domains" type="button" class="secondary-button compact">Reset defaults</button></div>
+        <p class="dialog-note">These intervals control additional exploration beyond CSC ancestor stops. Bootstrap and ordinary CSC tests may lie outside them. Verification and fault localization use all generated tests.</p>
+        <div id="csc-input-domains" aria-live="polite"></div>
+      </section>
+      <label>Max iterations<input name="max_iter" type="number" min="1" value="30"></label>
+      <label data-csc-field="workers" title="Parallel compile-and-execute workers (batch strategy only)">Workers<input name="workers" type="number" min="1" max="128" value="4"></label>
+      <label>Bootstrap<input name="bootstrap" type="text" placeholder="x=1,y=2"></label>
+    </form>
+    <footer class="dialog-footer"><button id="csc-dialog-close" class="secondary-button" type="button" data-close-dialog>Cancel</button><button id="confirm-csc" class="primary-button" type="button">Generate Tests</button></footer>
+  </dialog>
+
+  <dialog id="tbfv-dialog" class="analysis-dialog" aria-labelledby="tbfv-dialog-title">
+    <header class="dialog-header">
+      <div><span class="dialog-step">Step 2</span><h2 id="tbfv-dialog-title">Configure Verification</h2><p>Choose which generated tests to verify against the FSF.</p></div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+    </header>
+    <div class="dialog-settings">
+      <label class="dialog-wide">Generated test result<select id="tbfv-csc-job"></select></label>
+      <label class="checkbox-label dialog-wide"><input id="tbfv-render" type="checkbox" checked>Mark verification failures on the CCT</label>
+      <p id="tbfv-input-domain" class="dialog-note dialog-wide"></p>
+    </div>
+    <footer class="dialog-footer"><button class="secondary-button" type="button" data-close-dialog>Cancel</button><button id="confirm-tbfv" class="primary-button" type="button">Run Verification</button></footer>
+  </dialog>
+
+  <dialog id="localization-dialog" class="analysis-dialog" aria-labelledby="localization-dialog-title">
+    <header class="dialog-header">
+      <div><span class="dialog-step">Step 3</span><h2 id="localization-dialog-title">Configure Fault Localization</h2><p>Choose the verification evidence used to rank suspicious locations.</p></div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+    </header>
+    <div class="dialog-settings">
+      <label class="dialog-wide">Verification result<select id="localization-tbfv-job"></select></label>
+      <label class="dialog-wide">SBFL formula<select id="localization-scoring"><option value="ochiai">Ochiai</option><option value="dstar">DStar (e=2)</option><option value="op2">Op2</option></select></label>
+      <p id="localization-input-domain" class="dialog-note dialog-wide"></p>
+    </div>
+    <footer class="dialog-footer"><button class="secondary-button" type="button" data-close-dialog>Cancel</button><button id="confirm-localization" class="primary-button" type="button">Locate Faults</button></footer>
+  </dialog>
+
+  <dialog id="history-dialog" class="analysis-dialog history-dialog" aria-labelledby="history-dialog-title">
+    <header class="dialog-header">
+      <div><span class="dialog-step">Saved analyses</span><h2 id="history-dialog-title">Restore or import an analysis</h2><p>Open a local run or import a portable read-only session without rerunning it.</p></div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+    </header>
+    <form id="session-import-form" class="session-import-form" novalidate>
+      <label for="session-archive-file">
+        <span>Portable session archive</span>
+        <span class="file-picker">
+          <input id="session-archive-file" name="session_file" type="file" accept=".csc-session.zip,application/zip" title="Choose session archive" required>
+          <span class="file-picker-action" aria-hidden="true">Choose file</span>
+          <span class="file-picker-name" aria-live="polite">No file selected</span>
+        </span>
+      </label>
+      <button class="primary-button" type="submit">Import archive</button>
+      <span id="session-import-status" class="session-import-status" role="status" aria-live="polite"></span>
+    </form>
+    <div id="history-list" class="history-list" aria-live="polite">
+      <div class="history-empty"><strong>No historical runs</strong><span>Completed analyses will appear here.</span></div>
+    </div>
+    <footer class="dialog-footer"><span id="history-count" class="dialog-footer-note">0 saved runs</span><button class="secondary-button" type="button" data-close-dialog>Close</button></footer>
+  </dialog>
+
+  <dialog id="environment-dialog" class="analysis-dialog" aria-labelledby="environment-dialog-title">
+    <header class="dialog-header">
+      <div>
+        <span class="dialog-step">Diagnostics</span>
+        <h2 id="environment-dialog-title">Analysis Engine Environment</h2>
+        <p>Runtime dependencies, tools, and configured storage roots.</p>
+      </div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+    </header>
+    <div class="dialog-body">
+      <dl id="environment-list" class="environment-list"></dl>
+    </div>
+    <footer class="dialog-footer">
+      <button class="secondary-button" type="button" data-close-dialog>Close</button>
+    </footer>
+  </dialog>
+
+  <dialog id="source-dialog" class="analysis-dialog source-dialog" aria-labelledby="source-dialog-title">
+    <header class="dialog-header">
+      <div>
+        <span class="dialog-step">Source &amp; Specification</span>
+        <h2 id="source-dialog-title">Program Source &amp; FSF</h2>
+        <p id="source-dialog-subtitle">Inspect the loaded Java source code and Formal Specification File (FSF).</p>
+      </div>
+      <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+    </header>
+    <div class="source-dialog-toolbar">
+      <div class="source-dialog-tabs" role="tablist" aria-label="Source code views">
+        <button id="source-tab-java" class="source-tab-btn active" type="button" role="tab" aria-selected="true" data-source-tab="java">
+          Java Source <span id="source-tab-java-name" class="source-file-badge"></span>
+        </button>
+        <button id="source-tab-fsf" class="source-tab-btn" type="button" role="tab" aria-selected="false" data-source-tab="fsf">
+          FSF <span id="source-tab-fsf-name" class="source-file-badge"></span>
+        </button>
+      </div>
+      <div class="source-dialog-actions">
+        <button id="copy-source-btn" class="secondary-button compact" type="button">Copy</button>
+      </div>
+    </div>
+    <div class="source-dialog-body">
+      <div id="source-code-viewer" class="source-code-viewer" tabindex="0"></div>
+    </div>
+    <footer class="dialog-footer">
+      <span id="source-dialog-stats" class="dialog-footer-note"></span>
+      <button class="secondary-button" type="button" data-close-dialog>Close</button>
+    </footer>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/assets/vendor/d3.v7.9.0.min.js"></script>
+  <script type="module" src="/assets/app.js?v=13"></script>
+</body>
+</html>

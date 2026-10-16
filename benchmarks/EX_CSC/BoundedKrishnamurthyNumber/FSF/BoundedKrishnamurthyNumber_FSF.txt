@@ -1,0 +1,11 @@
+[fsf_1]
+T: number < 1 || number > 200
+D: return_value == -1
+
+[fsf_2]
+T: number >= 1 && number <= 200 && (number == 1 || number == 2 || number == 145)
+D: return_value == 1
+
+[fsf_3]
+T: number >= 1 && number <= 200 && number != 1 && number != 2 && number != 145
+D: return_value == 0

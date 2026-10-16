@@ -1,0 +1,35 @@
+[fsf_1]
+    T: days < 0 || days > 500 || limit < 0 || limit > 500 || surge < 0 || surge > 500
+    D: return_value == -1
+
+[fsf_2]
+    T: days >= 0 && days <= 200 && limit >= 0 && limit <= 200 && surge >= 0 && surge <= 200 && (((days + 2) / 3) <= 220)
+    D: return_value == ((days + 2) / 3)
+
+[fsf_3]
+    T: days >= 0 && days <= 200 && limit >= 0 && limit <= 200 && surge >= 0 && surge <= 200 && (((days + 2) / 3) > 220)
+    D: return_value == 220
+
+[fsf_4]
+    T: days >= 0 && days <= 200 && limit > 200 && limit <= 500 && surge >= 0 && surge <= 200 && (6 * ((days + 2) / 3)) <= 220
+    D: return_value == 6 * ((days + 2) / 3)
+
+[fsf_5]
+    T: days >= 0 && days <= 200 && limit > 200 && limit <= 500 && surge >= 0 && surge <= 200 && (6 * ((days + 2) / 3)) > 220
+    D: return_value == 220
+
+[fsf_6]
+    T: days > 200 && days <= 500 && limit >= 0 && limit <= 200 && surge >= 0 && surge <= 200 && (3 * ((days + 2) / 3)) <= 220
+    D: return_value == 3 * ((days + 2) / 3)
+
+[fsf_7]
+    T: days > 200 && days <= 500 && limit >= 0 && limit <= 200 && surge >= 0 && surge <= 200 && (3 * ((days + 2) / 3)) > 220
+    D: return_value == 220
+
+[fsf_8]
+    T: days >= 0 && days <= 200 && limit >= 0 && limit <= 200 && surge > 200 && surge <= 500 && (5 * ((days + 2) / 3)) <= 220
+    D: return_value == 5 * ((days + 2) / 3)
+
+[fsf_9]
+    T: days >= 0 && days <= 200 && limit >= 0 && limit <= 200 && surge > 200 && surge <= 500 && (5 * ((days + 2) / 3)) > 220
+    D: return_value == 220

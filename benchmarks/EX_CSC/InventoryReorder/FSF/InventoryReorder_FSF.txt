@@ -1,0 +1,35 @@
+[fsf_1]
+T: stock < 0 || stock > 100 || demand < 0 || demand > 15
+D: return_value == -1
+
+[fsf_2]
+T: stock >= 0 && stock < 80 && demand >= 0 && demand <= 15 && capMode == false && stock + 2 * demand <= 100
+D: return_value == stock + 2 * demand
+
+[fsf_3]
+T: stock >= 0 && stock < 80 && demand >= 0 && demand <= 15 && capMode == false && stock + 2 * demand > 100
+D: return_value == 100
+
+[fsf_4]
+T: stock >= 80 && stock <= 100 && demand >= 0 && demand <= 15 && capMode == false && stock + demand <= 100
+D: return_value == stock + demand
+
+[fsf_5]
+T: stock >= 80 && stock <= 100 && demand >= 0 && demand <= 15 && capMode == false && stock + demand > 100
+D: return_value == 100
+
+[fsf_6]
+T: stock >= 0 && stock < 80 && demand >= 0 && demand <= 15 && capMode == true && stock + 2 * demand <= 95
+D: return_value == stock + 2 * demand
+
+[fsf_7]
+T: stock >= 0 && stock < 80 && demand >= 0 && demand <= 15 && capMode == true && stock + 2 * demand > 95
+D: return_value == 95
+
+[fsf_8]
+T: stock >= 80 && stock <= 100 && demand >= 0 && demand <= 15 && capMode == true && stock + demand <= 95
+D: return_value == stock + demand
+
+[fsf_9]
+T: stock >= 80 && stock <= 100 && demand >= 0 && demand <= 15 && capMode == true && stock + demand > 95
+D: return_value == 95

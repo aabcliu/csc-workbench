@@ -1,0 +1,11 @@
+[fsf_1]
+T: base < -90 || base > 90 || steps < -40 || steps > 40
+D: return_value == -1
+
+[fsf_2]
+T: base >= -90 && base <= 90 && steps >= -40 && steps <= 40 && heavy == false
+D: return_value == base + 2 * steps
+
+[fsf_3]
+T: base >= -90 && base <= 90 && steps >= -40 && steps <= 40 && heavy == true
+D: return_value == base + 3 * steps

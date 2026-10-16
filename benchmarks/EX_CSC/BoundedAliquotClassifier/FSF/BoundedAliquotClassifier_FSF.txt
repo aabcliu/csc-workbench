@@ -1,0 +1,15 @@
+[fsf_1]
+T: number < 1 || number > 50
+D: return_value == -1
+
+[fsf_2]
+T: number >= 1 && number <= 50 && (number == 6 || number == 28)
+D: return_value == 1
+
+[fsf_3]
+T: number >= 1 && number <= 50 && (number == 12 || number == 18 || number == 20 || number == 24 || number == 30 || number == 36 || number == 40 || number == 42 || number == 48)
+D: return_value == 2
+
+[fsf_4]
+T: number >= 1 && number <= 50 && number != 6 && number != 28 && number != 12 && number != 18 && number != 20 && number != 24 && number != 30 && number != 36 && number != 40 && number != 42 && number != 48
+D: return_value == 0

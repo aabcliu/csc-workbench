@@ -1,0 +1,27 @@
+[fsf_1]
+    T: bonus < 0 || bonus > 20 || rawScore < 0 || rawScore > 100
+    D: return_value < 0
+
+[fsf_2]
+    T: bonus > 0 && bonus <= 20 && rawScore >= 0 && rawScore < 90 && rawScore >= 50 && (rawScore - 2 * bonus) >= 0
+    D: return_value == (rawScore - 2 * bonus)
+
+[fsf_3]
+    T: bonus > 0 && bonus <= 20 && rawScore >= 0 && rawScore < 90 && rawScore >= 50 && (rawScore - 2 * bonus) < 0
+    D: return_value == 0
+
+[fsf_4]
+    T: bonus > 0 && bonus <= 20 && rawScore >= 0 && rawScore < 50 && strictMode && (rawScore - 2 * bonus - 10) >= 0
+    D: return_value == (rawScore - 2 * bonus - 10)
+
+[fsf_5]
+    T: bonus > 0 && bonus <= 20 && rawScore >= 0 && rawScore < 50 && strictMode && (rawScore - 2 * bonus - 10) < 0
+    D: return_value == 0
+
+[fsf_6]
+    T: bonus > 0 && bonus <= 20 && rawScore <= 100 && rawScore >= 90 && (rawScore + bonus) <= 100
+    D: return_value == (rawScore + bonus)
+
+[fsf_7]
+    T: bonus > 0 && bonus <= 20 && rawScore <= 100 && rawScore >= 90 && (rawScore + bonus) > 100
+    D: return_value == 100

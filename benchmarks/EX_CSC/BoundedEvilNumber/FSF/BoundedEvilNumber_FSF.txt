@@ -1,0 +1,11 @@
+[fsf_1]
+T: number < 0 || number > 100
+D: return_value == -1
+
+[fsf_2]
+T: number >= 0 && number <= 100 && (number == 0 || number == 3 || number == 5 || number == 6 || number == 9 || number == 10 || number == 12 || number == 15 || number == 17 || number == 18 || number == 20 || number == 23 || number == 24 || number == 27 || number == 29 || number == 30 || number == 33 || number == 34 || number == 36 || number == 39 || number == 40 || number == 43 || number == 45 || number == 46 || number == 48 || number == 51 || number == 53 || number == 54 || number == 57 || number == 58 || number == 60 || number == 63 || number == 65 || number == 66 || number == 68 || number == 71 || number == 72 || number == 75 || number == 77 || number == 78 || number == 80 || number == 83 || number == 85 || number == 86 || number == 89 || number == 90 || number == 92 || number == 95 || number == 96 || number == 99)
+D: return_value == 1
+
+[fsf_3]
+T: number >= 0 && number <= 100 && number != 0 && number != 3 && number != 5 && number != 6 && number != 9 && number != 10 && number != 12 && number != 15 && number != 17 && number != 18 && number != 20 && number != 23 && number != 24 && number != 27 && number != 29 && number != 30 && number != 33 && number != 34 && number != 36 && number != 39 && number != 40 && number != 43 && number != 45 && number != 46 && number != 48 && number != 51 && number != 53 && number != 54 && number != 57 && number != 58 && number != 60 && number != 63 && number != 65 && number != 66 && number != 68 && number != 71 && number != 72 && number != 75 && number != 77 && number != 78 && number != 80 && number != 83 && number != 85 && number != 86 && number != 89 && number != 90 && number != 92 && number != 95 && number != 96 && number != 99
+D: return_value == 0

@@ -1,0 +1,11 @@
+[fsf_1]
+T: number < 0 || number > 127
+D: return_value == -1
+
+[fsf_2]
+T: number >= 0 && number <= 127 && (number == 0 || number == 8 || number == 20 || number == 28 || number == 34 || number == 42 || number == 54 || number == 62 || number == 65 || number == 73 || number == 85 || number == 93 || number == 99 || number == 107 || number == 119 || number == 127)
+D: return_value == 1
+
+[fsf_3]
+T: number >= 0 && number <= 127 && number != 0 && number != 8 && number != 20 && number != 28 && number != 34 && number != 42 && number != 54 && number != 62 && number != 65 && number != 73 && number != 85 && number != 93 && number != 99 && number != 107 && number != 119 && number != 127
+D: return_value == 0

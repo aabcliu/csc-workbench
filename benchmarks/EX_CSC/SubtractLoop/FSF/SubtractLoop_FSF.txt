@@ -1,0 +1,7 @@
+[fsf_1]
+T: x < -100 || x > 100 || y < -100 || y > 100
+D: return_value == -1
+
+[fsf_2]
+T: x >= -100 && x <= 100 && y >= -100 && y <= 100
+D: return_value == x - y

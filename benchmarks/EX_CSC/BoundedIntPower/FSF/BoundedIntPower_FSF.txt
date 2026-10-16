@@ -1,0 +1,75 @@
+[fsf_1]
+T: base < -5 || base > 5 || exponent < 0 || exponent > 8
+D: return_value == -1
+
+[fsf_2]
+T: base >= -5 && base <= 5 && exponent == 0
+D: return_value == 1
+
+[fsf_3]
+T: base >= -5 && base <= 5 && exponent >= 1 && exponent <= 8 && base == 0
+D: return_value == 0
+
+[fsf_4]
+T: base >= -5 && base <= 5 && exponent == 1 && signedMode == true && base != 0
+D: return_value == base
+
+[fsf_5]
+T: base >= -5 && base <= 5 && exponent == 1 && signedMode == false && base < 0
+D: return_value == -base
+
+[fsf_6]
+T: base >= -5 && base <= 5 && exponent == 1 && signedMode == false && base > 0
+D: return_value == base
+
+[fsf_7]
+T: base >= -5 && base <= 5 && exponent == 2 && base != 0
+D: return_value == base * base
+
+[fsf_8]
+T: base >= -5 && base <= 5 && exponent == 3 && signedMode == true && base != 0
+D: return_value == base * base * base
+
+[fsf_9]
+T: base >= -5 && base <= 5 && exponent == 3 && signedMode == false && base < 0
+D: return_value == (-base) * (-base) * (-base)
+
+[fsf_10]
+T: base >= -5 && base <= 5 && exponent == 3 && signedMode == false && base > 0
+D: return_value == base * base * base
+
+[fsf_11]
+T: base >= -5 && base <= 5 && exponent == 4 && base != 0
+D: return_value == base * base * base * base
+
+[fsf_12]
+T: base >= -5 && base <= 5 && exponent == 5 && signedMode == true && base != 0
+D: return_value == base * base * base * base * base
+
+[fsf_13]
+T: base >= -5 && base <= 5 && exponent == 5 && signedMode == false && base < 0
+D: return_value == (-base) * (-base) * (-base) * (-base) * (-base)
+
+[fsf_14]
+T: base >= -5 && base <= 5 && exponent == 5 && signedMode == false && base > 0
+D: return_value == base * base * base * base * base
+
+[fsf_15]
+T: base >= -5 && base <= 5 && exponent == 6 && base != 0
+D: return_value == base * base * base * base * base * base
+
+[fsf_16]
+T: base >= -5 && base <= 5 && exponent == 7 && signedMode == true && base != 0
+D: return_value == base * base * base * base * base * base * base
+
+[fsf_17]
+T: base >= -5 && base <= 5 && exponent == 7 && signedMode == false && base < 0
+D: return_value == (-base) * (-base) * (-base) * (-base) * (-base) * (-base) * (-base)
+
+[fsf_18]
+T: base >= -5 && base <= 5 && exponent == 7 && signedMode == false && base > 0
+D: return_value == base * base * base * base * base * base * base
+
+[fsf_19]
+T: base >= -5 && base <= 5 && exponent == 8 && base != 0
+D: return_value == base * base * base * base * base * base * base * base

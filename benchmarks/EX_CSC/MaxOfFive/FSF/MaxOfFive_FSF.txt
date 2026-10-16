@@ -1,0 +1,3 @@
+[fsf_1]
+T: true
+D: return_value >= a && return_value >= b && return_value >= c && return_value >= d && return_value >= e && (return_value == a || return_value == b || return_value == c || return_value == d || return_value == e)

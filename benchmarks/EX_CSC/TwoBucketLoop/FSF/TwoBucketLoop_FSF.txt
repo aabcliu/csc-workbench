@@ -1,0 +1,35 @@
+[fsf_1]
+T: amount < 0 || amount > 100 || count < 0 || count > 20
+D: return_value == -1
+
+[fsf_2]
+T: amount >= 0 && amount < 50 && count >= 0 && count <= 20 && premium == false && amount + 3 * count <= 120
+D: return_value == amount + 3 * count
+
+[fsf_3]
+T: amount >= 0 && amount < 50 && count >= 0 && count <= 20 && premium == false && amount + 3 * count > 120
+D: return_value == 120
+
+[fsf_4]
+T: amount >= 50 && amount <= 100 && count >= 0 && count <= 20 && premium == false && amount + count <= 120
+D: return_value == amount + count
+
+[fsf_5]
+T: amount >= 50 && amount <= 100 && count >= 0 && count <= 20 && premium == false && amount + count > 120
+D: return_value == 120
+
+[fsf_6]
+T: amount >= 0 && amount < 50 && count >= 0 && count <= 20 && premium == true && amount + 3 * count + 5 <= 120
+D: return_value == amount + 3 * count + 5
+
+[fsf_7]
+T: amount >= 0 && amount < 50 && count >= 0 && count <= 20 && premium == true && amount + 3 * count + 5 > 120
+D: return_value == 120
+
+[fsf_8]
+T: amount >= 50 && amount <= 100 && count >= 0 && count <= 20 && premium == true && amount + count + 5 <= 120
+D: return_value == amount + count + 5
+
+[fsf_9]
+T: amount >= 50 && amount <= 100 && count >= 0 && count <= 20 && premium == true && amount + count + 5 > 120
+D: return_value == 120

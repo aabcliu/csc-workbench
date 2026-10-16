@@ -1,0 +1,15 @@
+[fsf_1]
+    T: tons <= 0
+    D: fee == 0
+[fsf_2]
+    T: tons > 0 && tons < 3
+    D: fee == 3 * tons
+[fsf_3]
+     T: tons >= 3 && tons < 10
+     D: fee == 6 + 4 * (tons - 2)
+[fsf_4]
+     T: tons >= 10 && tons < 30
+     D: fee == 34 + 5 * (tons - 9)
+[fsf_5]
+     T: tons >= 30
+     D: fee == 5 * tons

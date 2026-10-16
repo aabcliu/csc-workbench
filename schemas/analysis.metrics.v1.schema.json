@@ -1,0 +1,430 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://csc-workbench.local/schemas/analysis.metrics.v1.schema.json",
+  "title": "Analysis Metrics v1",
+  "description": "Versioned metric summaries for one CSC Workbench analysis job.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format",
+    "version",
+    "jobId",
+    "stage",
+    "generatedAt",
+    "registryVersion",
+    "lineage",
+    "metrics"
+  ],
+  "properties": {
+    "format": {
+      "const": "analysis.metrics"
+    },
+    "version": {
+      "const": 1
+    },
+    "jobId": {
+      "$ref": "#/$defs/nonEmptyString"
+    },
+    "stage": {
+      "$ref": "#/$defs/identifier"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "registryVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "lineage": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/lineageEntry"
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/metric"
+      }
+    }
+  },
+  "$defs": {
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]*$"
+    },
+    "lineageEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "jobId",
+        "stage",
+        "relation"
+      ],
+      "properties": {
+        "jobId": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "stage": {
+          "$ref": "#/$defs/identifier"
+        },
+        "relation": {
+          "$ref": "#/$defs/identifier"
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceJobId",
+        "stage"
+      ],
+      "properties": {
+        "sourceJobId": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "stage": {
+          "$ref": "#/$defs/identifier"
+        }
+      }
+    },
+    "reason": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "$ref": "#/$defs/identifier"
+        },
+        "message": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "artifactReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "role"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "role": {
+          "$ref": "#/$defs/identifier"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "producer",
+        "producerVersion",
+        "artifacts"
+      ],
+      "properties": {
+        "producer": {
+          "$ref": "#/$defs/identifier"
+        },
+        "producerVersion": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/artifactReference"
+          }
+        }
+      }
+    },
+    "detailsReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "artifact"
+      ],
+      "properties": {
+        "kind": {
+          "const": "artifact"
+        },
+        "artifact": {
+          "$ref": "#/$defs/nonEmptyString"
+        }
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "key",
+        "label",
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "key": {
+          "$ref": "#/$defs/identifier"
+        },
+        "label": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "$ref": "#/$defs/identifier"
+        }
+      }
+    },
+    "scalarData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "$ref": "#/$defs/identifier"
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/component"
+          }
+        }
+      }
+    },
+    "ratioData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "numerator",
+        "denominator",
+        "unit"
+      ],
+      "properties": {
+        "numerator": {
+          "type": "number",
+          "minimum": 0
+        },
+        "denominator": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "unit": {
+          "$ref": "#/$defs/identifier"
+        },
+        "components": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/component"
+          }
+        }
+      }
+    },
+    "vectorData": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primaryKey",
+        "measurements"
+      ],
+      "properties": {
+        "primaryKey": {
+          "$ref": "#/$defs/identifier"
+        },
+        "measurements": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/component"
+          }
+        }
+      }
+    },
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "definitionVersion",
+        "status",
+        "scope",
+        "dataType",
+        "dataVersion",
+        "provenance",
+        "extensions"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "definitionVersion": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "enum": [
+            "available",
+            "partial",
+            "pending",
+            "not_applicable",
+            "unavailable",
+            "unsupported",
+            "error"
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "dataType": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_.-]*\\.[a-z][a-z0-9_.-]*$"
+        },
+        "dataVersion": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "data": {
+          "type": "object"
+        },
+        "reason": {
+          "$ref": "#/$defs/reason"
+        },
+        "details": {
+          "$ref": "#/$defs/detailsReference"
+        },
+        "provenance": {
+          "$ref": "#/$defs/provenance"
+        },
+        "extensions": {
+          "type": "object",
+          "propertyNames": {
+            "pattern": "^[a-z][a-z0-9_.-]*/[a-z][a-z0-9_.-]*$"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "available",
+                  "partial"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "data"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "partial",
+                  "unavailable",
+                  "unsupported",
+                  "error"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "required": [
+              "reason"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "dataType": {
+                "const": "core.scalar"
+              }
+            },
+            "required": [
+              "dataType",
+              "data"
+            ]
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "$ref": "#/$defs/scalarData"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "dataType": {
+                "const": "core.ratio"
+              }
+            },
+            "required": [
+              "dataType",
+              "data"
+            ]
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "$ref": "#/$defs/ratioData"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "dataType": {
+                "const": "core.vector"
+              }
+            },
+            "required": [
+              "dataType",
+              "data"
+            ]
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "$ref": "#/$defs/vectorData"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

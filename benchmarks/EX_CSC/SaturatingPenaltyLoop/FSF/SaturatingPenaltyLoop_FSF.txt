@@ -1,0 +1,19 @@
+[fsf_1]
+T: score < 0 || score > 120 || penalty < 0 || penalty > 18
+D: return_value == -1
+
+[fsf_2]
+T: score >= 0 && score <= 120 && penalty >= 0 && penalty <= 18 && strict == false && score - 2 * penalty >= 0
+D: return_value == score - 2 * penalty
+
+[fsf_3]
+T: score >= 0 && score <= 120 && penalty >= 0 && penalty <= 18 && strict == false && score - 2 * penalty < 0
+D: return_value == 0
+
+[fsf_4]
+T: score >= 0 && score <= 120 && penalty >= 0 && penalty <= 18 && strict == true && score - 3 * penalty >= 0
+D: return_value == score - 3 * penalty
+
+[fsf_5]
+T: score >= 0 && score <= 120 && penalty >= 0 && penalty <= 18 && strict == true && score - 3 * penalty < 0
+D: return_value == 0

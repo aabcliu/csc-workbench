@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csc-web-workbench"
+version = "0.1.0"
+description = "Distributable Web interface for CSC, Refined TBFV, and spectrum-based fault localization"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "python-multipart>=0.0.9",
+]
+
+[project.scripts]
+csc-web = "app.launch:main"
+
+[tool.setuptools.packages.find]
+where = ["backend"]

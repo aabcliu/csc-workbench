@@ -1,0 +1,31 @@
+[fsf_1]
+T: exam < 0 || exam > 100 || penalty < 0 || penalty > 20
+D: return_value == -1
+
+[fsf_2]
+T: exam >= 60 && exam <= 100 && penalty >= 0 && penalty <= 20 && exam - penalty >= 0
+D: return_value == exam - penalty
+
+[fsf_3]
+T: exam >= 50 && exam < 60 && penalty >= 0 && penalty <= 20 && exam - 2 * penalty >= 0
+D: return_value == exam - 2 * penalty
+
+[fsf_4]
+T: exam >= 50 && exam < 60 && penalty >= 0 && penalty <= 20 && exam - 2 * penalty < 0
+D: return_value == 0
+
+[fsf_5]
+T: exam >= 0 && exam < 50 && penalty >= 0 && penalty <= 20 && strictMode == true && exam - 2 * penalty - 5 >= 0
+D: return_value == exam - 2 * penalty - 5
+
+[fsf_6]
+T: exam >= 0 && exam < 50 && penalty >= 0 && penalty <= 20 && strictMode == true && exam - 2 * penalty - 5 < 0
+D: return_value == 0
+
+[fsf_7]
+T: exam >= 0 && exam < 50 && penalty >= 0 && penalty <= 20 && strictMode == false && exam - 2 * penalty >= 0
+D: return_value == exam - 2 * penalty
+
+[fsf_8]
+T: exam >= 0 && exam < 50 && penalty >= 0 && penalty <= 20 && strictMode == false && exam - 2 * penalty < 0
+D: return_value == 0

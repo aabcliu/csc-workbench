@@ -1,0 +1,13 @@
+services:
+  csc-workbench:
+    image: ${CSC_IMAGE:-csc-workbench:0.1.0}
+    platform: ${CSC_PLATFORM:-}
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "127.0.0.1:${CSC_PORT:-8765}:8765"
+    volumes:
+      - ../runtime:/data
+    restart: unless-stopped
+    init: true

@@ -1,0 +1,2146 @@
+{
+  "name": "CSC Workbench",
+  "version": "0.1.0",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "bytes": 807,
+      "sha256": "ccfb01c95102b466a7cb6a32db8eff66a1ae0e6a2e2d4bf56acf2f346e542f4b"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1303,
+      "sha256": "3643909e928c8042808e96dbdf21ac9651e57849df44b7c8b52628f5f469347e"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1083,
+      "sha256": "32b0d89af2ba8f2e43fd6cc7057d78e9b1e60dbd9aa6a776a115f262f65d83c0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16451,
+      "sha256": "1744b92de8240381ed10176fbb98715ea44044a1395950d3b81a5c12e33d3544"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 3519,
+      "sha256": "8729d6aa5a57ffaf6af9645092c04e5515845ead6cf7b9023ed184892fa02268"
+    },
+    {
+      "path": "benchmarks/EX_CSC/AddLoop/AddLoop.java",
+      "bytes": 567,
+      "sha256": "a2895706bc107c5e231fe653f576b22f81e7bfd53fe4390282b3bd90f5890d92"
+    },
+    {
+      "path": "benchmarks/EX_CSC/AddLoop/AddLoop_M1.java",
+      "bytes": 568,
+      "sha256": "85c233c48a168b46d420e6e1e56bbb41184b8843a5ef1976995e81497c3e8eae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/AddLoop/AddLoop_M2.java",
+      "bytes": 568,
+      "sha256": "0d342b8d236cf91b2fd9acf414254d2d762957440c26ee95e2febe908db2967d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/AddLoop/AddLoop_M3.java",
+      "bytes": 568,
+      "sha256": "e3d41baae5aeed5810ba13087f25399b41d65fdb83b68fc3bed61e97a2286b21"
+    },
+    {
+      "path": "benchmarks/EX_CSC/AddLoop/AddLoop_M4.java",
+      "bytes": 567,
+      "sha256": "1f105efaeefff0097ad1e02838f9042d0ac1ef4a259955aec6873afb9620ce21"
+    },
+    {
+      "path": "benchmarks/EX_CSC/AddLoop/AddLoop_M5.java",
+      "bytes": 567,
+      "sha256": "f6a46a046a5d1b8b6429c1685821f30bb3dc8bd0a5f0f1599f7dcc0b558bf7bb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/AddLoop/AddLoop_M6.java",
+      "bytes": 567,
+      "sha256": "8e37a84112e6e744657f52875290a0e0dc53502a3b4f6a86ec50aa1e9ac02f5b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/AddLoop/FSF/AddLoop_FSF.txt",
+      "bytes": 260,
+      "sha256": "8d9e14dda5c878853942a542adc427d851a639481b7eca6263799043772cd27d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressCounter/BoundaryStressCounter.java",
+      "bytes": 818,
+      "sha256": "5b60a83123f9a396fb3d34f2e074b3428d71a4de450b9cead1593f18f3fbdec0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressCounter/BoundaryStressCounter_M1.java",
+      "bytes": 819,
+      "sha256": "5070f1b9925008f0e216fe4fc9241b49c43bce54444e90dfe4cafb26b2eb7e0f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressCounter/BoundaryStressCounter_M2.java",
+      "bytes": 819,
+      "sha256": "5189db758461678be903bf3de2115322da6b682fe06cc52bef99dbc89b491a25"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressCounter/BoundaryStressCounter_M3.java",
+      "bytes": 818,
+      "sha256": "eb8142e047294dddcfca28b247aa7495e1dd0ccabd1f0c5fc68955dfffdad52d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressCounter/BoundaryStressCounter_M4.java",
+      "bytes": 818,
+      "sha256": "92987294c634da5ce22ddeb2934fa4157a92d84f3dd9bf0c3ad9d8e47b158cfe"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressCounter/BoundaryStressCounter_M5.java",
+      "bytes": 818,
+      "sha256": "ee15103351b7caff0a1fbb549506a5da691103fae28e81dbfa99ca9f39d36669"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressCounter/BoundaryStressCounter_M8.java",
+      "bytes": 832,
+      "sha256": "e687a633b1763fa3c1b0e0407f86a542d3b65a4a3851abf4e1a478a231da5adb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressCounter/FSF/BoundaryStressCounter_FSF.txt",
+      "bytes": 1496,
+      "sha256": "0dd9eedb9299555ab8219fc8209fe247c79816070cc52a66089476e6ceaa2d2a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressMeter/BoundaryStressMeter.java",
+      "bytes": 929,
+      "sha256": "2b8ad825d13108005864c0918f160be57015e85db747e8e74b54d8a13d41f5ae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressMeter/BoundaryStressMeter_M1.java",
+      "bytes": 930,
+      "sha256": "83b6c18c680f0b9cc5dcde741ba24e3ba46603e080b309a12e4d2c2ed28ca1a5"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressMeter/BoundaryStressMeter_M2.java",
+      "bytes": 930,
+      "sha256": "ec19dff195374ea8cdc30ec45d38d4989c74762e630366b4a62ae88ede760206"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressMeter/BoundaryStressMeter_M3.java",
+      "bytes": 929,
+      "sha256": "4cf03e815192e0193739f829ae4edebcfe2ac95248d1cb7f57c25eecaf988972"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressMeter/BoundaryStressMeter_M4.java",
+      "bytes": 929,
+      "sha256": "714eea8161f370041e267c209ed423840632499bf4ba23f1b4989caff78e6674"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressMeter/BoundaryStressMeter_M5.java",
+      "bytes": 929,
+      "sha256": "84c989a42b9f51ff0d391195c41647620eff84f3eeac49ed9e18a306a5f2324f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressMeter/BoundaryStressMeter_M8.java",
+      "bytes": 943,
+      "sha256": "90159359f0ddc78498c15ed067082ea7f091e445857eeb60081fc6d4c2651d77"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundaryStressMeter/FSF/BoundaryStressMeter_FSF.txt",
+      "bytes": 1466,
+      "sha256": "259a49ec13915b6ee546a0adb81565b29b4a0388a5063f3037a21a66a6244db2"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAbundantNumber/BoundedAbundantNumber.java",
+      "bytes": 452,
+      "sha256": "ab8a7218cd349ba70009559fd084af4b487f990f90a9371d2da8eaee7142c01a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAbundantNumber/BoundedAbundantNumber_M1.java",
+      "bytes": 453,
+      "sha256": "75afac21a3dc5a268df9174b812628c8f0b5b2cebd0a532786aa4a3a374166fb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAbundantNumber/BoundedAbundantNumber_M2.java",
+      "bytes": 451,
+      "sha256": "539f6955bc9be5bd22ba8f709110c89afb36951f27e83cc59f0051b54d113814"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAbundantNumber/BoundedAbundantNumber_M3.java",
+      "bytes": 453,
+      "sha256": "31b0aa33777365ca50bd09fa2371fcce7dc03654fba2d9f43568bd0ab4486316"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAbundantNumber/BoundedAbundantNumber_M4.java",
+      "bytes": 448,
+      "sha256": "d460e6edc8336e3dcdaebb3122ddb5f11024c9dc1638bc2da371a86b99ea268e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAbundantNumber/BoundedAbundantNumber_M5.java",
+      "bytes": 452,
+      "sha256": "db2661a6297d5cee076a0f92ffcf5dc5d8d661808759382222d3e93bb031cdd1"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAbundantNumber/BoundedAbundantNumber_M6.java",
+      "bytes": 452,
+      "sha256": "218627e13274c46671e47fffec844d00e191f711a2c7545dc8aaecd5ab69235b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAbundantNumber/FSF/BoundedAbundantNumber_FSF.txt",
+      "bytes": 471,
+      "sha256": "260595030c287340e67174e3e70ef6f390e00e51d8ee0bd3ef4ef66cfc9f63f8"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAliquotClassifier/BoundedAliquotClassifier.java",
+      "bytes": 533,
+      "sha256": "b345e19f589223555dde6f3a3c7d552672e28997e42f14707a68f03cc765154d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAliquotClassifier/BoundedAliquotClassifier_M1.java",
+      "bytes": 534,
+      "sha256": "b30b024c1911d53ce6bce3bc13cf0694272f52254e5b10012bc11e533c1b504a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAliquotClassifier/BoundedAliquotClassifier_M2.java",
+      "bytes": 534,
+      "sha256": "96a5a89682091244aeb4808b03fb8b3fbdbe869dacf70adcc0a897ef3ddc4b83"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAliquotClassifier/BoundedAliquotClassifier_M3.java",
+      "bytes": 534,
+      "sha256": "8e911648d83bca65f3bbdcf120cf4f90c0e88656c424fa498078561c87c265a6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAliquotClassifier/BoundedAliquotClassifier_M4.java",
+      "bytes": 533,
+      "sha256": "aa5f84aa3b2eaad40386375a07dc60faae0f79e99accdd042e43f38181f2e345"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAliquotClassifier/BoundedAliquotClassifier_M5.java",
+      "bytes": 533,
+      "sha256": "a7d9b6a3ad59c4a38e442e3cd62adef8e3421b45eeceddcd6d5dd0264b6c4b98"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAliquotClassifier/BoundedAliquotClassifier_M6.java",
+      "bytes": 533,
+      "sha256": "ac7eb0a78b1be9f4735673d621cb1085028322e10fbb900f063aa1f0f4215af4"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedAliquotClassifier/FSF/BoundedAliquotClassifier_FSF.txt",
+      "bytes": 596,
+      "sha256": "6e6d9f8537e2db86a95b9206e27b1ecb3f5c1399f763d17e671ab1f1b8a5091c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier.java",
+      "bytes": 759,
+      "sha256": "f96976ebebeeb857c67682bc875921bfbac56e277fec259c15ee633b3e735204"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M1.java",
+      "bytes": 760,
+      "sha256": "e354b0a3c026d76029d1c45bc4d531ba0820b801af2c65c77a4f7b1866222e8e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M2.java",
+      "bytes": 759,
+      "sha256": "ec553eb2a8f5722ef16d60cc0fd619cba21bac8e723e43161fd7c755a9eaba91"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M3.java",
+      "bytes": 759,
+      "sha256": "bd75be0a5216d9da0f37e2c382e04da853bcf8ade249e555cc87ba126385824a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M4.java",
+      "bytes": 759,
+      "sha256": "daccc19afce7af6e2e245ec720171223617e3fdccbf299c1b71e89af983c1578"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M5.java",
+      "bytes": 759,
+      "sha256": "fc17f6c631acbf4c16c4aa266e1c19743dad6da7a4436d04bee7416a1b56d2b2"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBinaryPalindromeClassifier/BoundedBinaryPalindromeClassifier_M6.java",
+      "bytes": 759,
+      "sha256": "61745ebee671fddc335071f20c1c70b2aff365f9491d314ec797ece35969930e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBinaryPalindromeClassifier/FSF/BoundedBinaryPalindromeClassifier_FSF.txt",
+      "bytes": 700,
+      "sha256": "885e1cd7726cee314196bbb50bfa57a8d55bfa38226598713df6af25cdbfb1a6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBitTransitionClassifier/BoundedBitTransitionClassifier.java",
+      "bytes": 747,
+      "sha256": "dbb87291f80ca29eb328293f3714e01ae9acf1b1215f729f350630d26ca16693"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M1.java",
+      "bytes": 748,
+      "sha256": "84520df03d8cf669778275ff5f15b83876a3b02ef362f4323d132579c1987ea7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M2.java",
+      "bytes": 748,
+      "sha256": "ed9159f8c00e74142b93f005109efe69afa5f7eafe9a811d27c5863f434dda5c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M3.java",
+      "bytes": 746,
+      "sha256": "bc9261ed374f9af50cc52f5c800aa72ff3c2f8944f89dbb2176cd9f8de49ba4f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M4.java",
+      "bytes": 747,
+      "sha256": "6b1319f9c32f0d46f49fc4c82a619d5a79c016794ae6af3a0fd483c54da19309"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M5.java",
+      "bytes": 738,
+      "sha256": "bfacdfa4c9dafe8f39d0d0271545c4d2f8a71af7f6162bf30a2853c7a27100fa"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBitTransitionClassifier/BoundedBitTransitionClassifier_M6.java",
+      "bytes": 747,
+      "sha256": "2aa9493b94cf299f116a7b91dee50a05ae1ee760e2f394f3c14b2ab0f50b6e4f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedBitTransitionClassifier/FSF/BoundedBitTransitionClassifier_FSF.txt",
+      "bytes": 2318,
+      "sha256": "c7ee0026d8e4ade59aed06de8c9d35f643d21827ee60290db155c43d627ce053"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedDivisorCountClassifier/BoundedDivisorCountClassifier.java",
+      "bytes": 537,
+      "sha256": "250e15ebd4c4e2410abca883e5dfb218f6b42eeefb5714d387685e78e1ab4674"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M1.java",
+      "bytes": 538,
+      "sha256": "3904c9d2b7f6ba7212f0871778564c812bad4dbce9e97597037767f8d00455dc"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M2.java",
+      "bytes": 536,
+      "sha256": "b082b04c4e4f43ef70e4425c2ab25d5afc0ab23597b53a4ec0d2d2a2a52d161b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M3.java",
+      "bytes": 536,
+      "sha256": "b529404bb88a5066bb21f799043ae1b75d0dc3e59c973438d57c2bc751cf8b13"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M4.java",
+      "bytes": 537,
+      "sha256": "6474cb83cd87a7df1d62e60d7f766a75a0d61ac8f2fbb52a3c7d56258804891a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M5.java",
+      "bytes": 537,
+      "sha256": "b501cafaa3c1a8437bc0e6a42e365811caf72cf76a76a642c46a4d9e18e33b13"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedDivisorCountClassifier/BoundedDivisorCountClassifier_M6.java",
+      "bytes": 537,
+      "sha256": "8d30d0f9b9b98f45b08ffb62515d5daf0e3545433e7c629784b686d9291073a0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedDivisorCountClassifier/FSF/BoundedDivisorCountClassifier_FSF.txt",
+      "bytes": 1039,
+      "sha256": "62e728a919ad840ef82e977bebf1a2a2b7bda59a0eb0ea7985fb39e5869eda73"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedEvilNumber/BoundedEvilNumber.java",
+      "bytes": 511,
+      "sha256": "70224d4be6a86fdefa00dd168bffd4174aae1a67a13059ea5c772f053a46cc43"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedEvilNumber/BoundedEvilNumber_M1.java",
+      "bytes": 512,
+      "sha256": "1459af36953b0e44b2685e2831f0f0d8da6eb4aee7f0176695cb44630c34727d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedEvilNumber/BoundedEvilNumber_M2.java",
+      "bytes": 511,
+      "sha256": "3a91bf88a76482bc762f0e5a863222b7590fcde2e091a585e9b3f29801fa6696"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedEvilNumber/BoundedEvilNumber_M3.java",
+      "bytes": 511,
+      "sha256": "f9453a0a2aea0f1be8abf827e3f4cbc0672781b4f175bf80952febaecaf23b93"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedEvilNumber/BoundedEvilNumber_M4.java",
+      "bytes": 511,
+      "sha256": "938f6d93d7eb8d798006d451569617681e0974f0f43394700e9d05000e4c11d4"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedEvilNumber/BoundedEvilNumber_M5.java",
+      "bytes": 511,
+      "sha256": "fc8149066bf0b272a80e938f29d2508cea0ca3bc016d59334e9114c2e45fc78a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedEvilNumber/BoundedEvilNumber_M6.java",
+      "bytes": 511,
+      "sha256": "c3e2adba790cb09b07d1ecdd7e5d2bbffaa04086b8df050b92c4d8f6355d2b49"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedEvilNumber/FSF/BoundedEvilNumber_FSF.txt",
+      "bytes": 1776,
+      "sha256": "5211a6037e37485700bdda7d2a48d0d5e34240ecb1cbb434da7fd5cb7a28aa37"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedIntPower/BoundedIntPower.java",
+      "bytes": 694,
+      "sha256": "bb4c2a94dcbaf4a28885fde0c637505f3d932841a700a067aacc2eef67bb2373"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedIntPower/BoundedIntPower_M1.java",
+      "bytes": 695,
+      "sha256": "7ef37c809bd28dd49b7b033b9a2cd70563fb21b54679fe9e33d5e8b723c795d5"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedIntPower/BoundedIntPower_M2.java",
+      "bytes": 695,
+      "sha256": "37f24da757c18a5a1b16002cfb53a6b482e552f097449b354392421d78211dbe"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedIntPower/BoundedIntPower_M3.java",
+      "bytes": 695,
+      "sha256": "32a0ed6611d7adcf13b4e010bc9ef136c06406fbb8a7a1b073d7c37f5d4a11dd"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedIntPower/BoundedIntPower_M4.java",
+      "bytes": 694,
+      "sha256": "32d04ced3c112060f3e4bc60c4ca128a5be785ef20b13176b675711b4d54a3aa"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedIntPower/BoundedIntPower_M5.java",
+      "bytes": 694,
+      "sha256": "7f0bbb6f7200abe8088ceeec84b63cd12fac5470d00f52778909fa6af4d3e536"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedIntPower/BoundedIntPower_M6.java",
+      "bytes": 698,
+      "sha256": "532a50ecaabca249153bfb3cd0e0d2b149667f62009c9c46f9752dcc26465fe7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedIntPower/FSF/BoundedIntPower_FSF.txt",
+      "bytes": 2389,
+      "sha256": "483796ad8d9985a91750debd4020634025c100495c76ffb6f99fb30b13b8ecae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber.java",
+      "bytes": 659,
+      "sha256": "0e062eae7ac74478481acfa58f8c838c9fc902d128bb2871d137ac32f5a6e957"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M1.java",
+      "bytes": 660,
+      "sha256": "16598a104f6a19ad6f8393e00aa39c5504db82d9b39999c372992ab5c8492b4a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M2.java",
+      "bytes": 658,
+      "sha256": "5119736421a9e34dd1318b331796eaf43df2b29292b23a1ae0522d224312b211"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M3.java",
+      "bytes": 659,
+      "sha256": "e5de46680ae9aa7b1863797c056d5bb1d1ce16c75de30b712b78e9de59cb38b3"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M4.java",
+      "bytes": 659,
+      "sha256": "d58ea325487ee2a8e4f3e1094685839a1933dbbb75a55484ba4c5b173290da0d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M5.java",
+      "bytes": 659,
+      "sha256": "68534ea24ad52bdc0024f8ed174b49c31d9c53315183f9807c497c48dd7a55c1"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedKrishnamurthyNumber/BoundedKrishnamurthyNumber_M6.java",
+      "bytes": 659,
+      "sha256": "0069cf245247cc976f4696b0b06ef40c595549dc2f98db6c68fe959c7f010663"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedKrishnamurthyNumber/FSF/BoundedKrishnamurthyNumber_FSF.txt",
+      "bytes": 280,
+      "sha256": "541515b47f4dce0bb8edcd40bcc8959c622f3645553ec82a832c8d5a9a49d573"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectNumber/BoundedPerfectNumber.java",
+      "bytes": 433,
+      "sha256": "dabada3d03a7947ff397d1bae5bf35f9a37c4308c09da9b6bad853b753e9dd07"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectNumber/BoundedPerfectNumber_M1.java",
+      "bytes": 434,
+      "sha256": "900d7d4f28f7810fa45a01b317490a0785e0e1e8b693178794aba8eef5997d60"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectNumber/BoundedPerfectNumber_M2.java",
+      "bytes": 434,
+      "sha256": "b41f14101b049371fee88f813a20cb5014a5fc92c8a3e4fd4398880d3f863f32"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectNumber/BoundedPerfectNumber_M3.java",
+      "bytes": 433,
+      "sha256": "78ca9ba12df94dd8b4226cca3f005ac64c39a3c822cae4d06616263d1ac3f47b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectNumber/BoundedPerfectNumber_M4.java",
+      "bytes": 433,
+      "sha256": "8dd60f4cf0285e228926346a5aa9acfcde262b898cb6ebbda78a097f223045d8"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectNumber/BoundedPerfectNumber_M5.java",
+      "bytes": 433,
+      "sha256": "985eb569e896beac95cea2eb97765d8cf16e03b067f2675f6c512b5ec07c016a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectNumber/BoundedPerfectNumber_M6.java",
+      "bytes": 433,
+      "sha256": "0742c2e5e316db193f9b1224821940f067ccc3f0074365345cd986516ce2ff40"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectNumber/FSF/BoundedPerfectNumber_FSF.txt",
+      "bytes": 245,
+      "sha256": "ccce00c374d78b5c6cb19251e76b02f4a34c791502a10f8c025ec2273d75c62d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectSquareLoop/BoundedPerfectSquareLoop.java",
+      "bytes": 356,
+      "sha256": "b0fa076a7e16a6bd5b83c4b427e1f60488eaf93310a3c38857a2686e2f579de7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M1.java",
+      "bytes": 357,
+      "sha256": "b9f176c9d437dd4f881655e5c0353a8b241c619605cd9c38d759768e609cddc9"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M2.java",
+      "bytes": 355,
+      "sha256": "d2c0ad2296e14b2289f56c9bf9c8b4a8b5c55c5da87d76e220cc6948e64b9efc"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M3.java",
+      "bytes": 356,
+      "sha256": "3bc0f02e5d12c52de3fcc55cc485a37b3a0e30ecf99dbbb0035da3376ba4f6cb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M4.java",
+      "bytes": 356,
+      "sha256": "1c4e70caa4593260e23307236460cbe338add6fbf36218a69a3ab1ae697b843f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M5.java",
+      "bytes": 356,
+      "sha256": "a213de85bb26b9323779cf843acc73290d5436ef6a827970d7df05679f792908"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectSquareLoop/BoundedPerfectSquareLoop_M6.java",
+      "bytes": 356,
+      "sha256": "ad1d726776640544cba39a93b150c9f35ceb2c4eeabfc6b80da318c437c85d0b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPerfectSquareLoop/FSF/BoundedPerfectSquareLoop_FSF.txt",
+      "bytes": 532,
+      "sha256": "c391a8623c7b64413d47a441501fd8b310e873a2b277d76b4a94c31a87b7258c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPopcountDensity/BoundedPopcountDensity.java",
+      "bytes": 500,
+      "sha256": "c5c92f00f5e466d9c593741e04dea2bb176d8a7415e5c373f6bd8732e76b203e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPopcountDensity/BoundedPopcountDensity_M1.java",
+      "bytes": 501,
+      "sha256": "438e307fdf540aa104f40e41566760b223e2053454b13a305a18a00da6e2eb03"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPopcountDensity/BoundedPopcountDensity_M2.java",
+      "bytes": 500,
+      "sha256": "2cf0c83eab364d1ae198bf5e49ca65f5e05caa7dfcbcaaa7e8ec3b60fd99428f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPopcountDensity/BoundedPopcountDensity_M3.java",
+      "bytes": 499,
+      "sha256": "78f150264eeaa4d5e6b99d37827ad6f6e55e75ef669dff4adcef1ad98c0f202d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPopcountDensity/BoundedPopcountDensity_M4.java",
+      "bytes": 500,
+      "sha256": "e61a48fc872f72bb7296e093f3bead9c4389774c9c8518f4057db83f531e3eb8"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPopcountDensity/BoundedPopcountDensity_M5.java",
+      "bytes": 500,
+      "sha256": "a1d245b9b32be16a0a413e692831959e5194e18bd3abf973b41362b82ee4e2eb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPopcountDensity/BoundedPopcountDensity_M6.java",
+      "bytes": 500,
+      "sha256": "40d8930b860946d2cc40a804888b7eb99f93c61968faa27acce9f657937e4463"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPopcountDensity/FSF/BoundedPopcountDensity_FSF.txt",
+      "bytes": 2318,
+      "sha256": "52a955387ccb336557d92ca538979f2b2404433d23343c59cd4e6d05ed546a51"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPrimeClassifier/BoundedPrimeClassifier.java",
+      "bytes": 493,
+      "sha256": "1c01ef8125573092b2d0ec7f826d5c3b3402091aa606c9bb2ae466b78a242b9e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPrimeClassifier/BoundedPrimeClassifier_M1.java",
+      "bytes": 494,
+      "sha256": "5c6650f85140f99bc4edaaf6f517c1c5a4287acccd96319cf5740c60b294eefc"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPrimeClassifier/BoundedPrimeClassifier_M2.java",
+      "bytes": 492,
+      "sha256": "3437c6b7ed998ed239158126f9b650fb5a2f21289800e69a34554b37a7c467fb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPrimeClassifier/BoundedPrimeClassifier_M3.java",
+      "bytes": 493,
+      "sha256": "ecb17c4297b932e84c4237762c2f9d00028be441c182dcbc6462c24ce531cf7e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPrimeClassifier/BoundedPrimeClassifier_M4.java",
+      "bytes": 493,
+      "sha256": "b69d9c18f33d729eaa23a032fb0b5aa892f2673ef4d5d0be5bcd04daff79367e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPrimeClassifier/BoundedPrimeClassifier_M5.java",
+      "bytes": 493,
+      "sha256": "fa6ebb7ee62ab200f64e19114858594b747ca6ba0540eb67a9ce1cd07c37c6a7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPrimeClassifier/BoundedPrimeClassifier_M6.java",
+      "bytes": 493,
+      "sha256": "de20bc1fea1af9697f0b7dc5cb7fd8daa2ca842b9f48c341c08a7d821a5accb7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPrimeClassifier/FSF/BoundedPrimeClassifier_FSF.txt",
+      "bytes": 655,
+      "sha256": "3e60dfe782971f7ee416eaba7a684a175d282cbcc2d3d4f70c58b18777c53da6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPronicNumber/BoundedPronicNumber.java",
+      "bytes": 424,
+      "sha256": "b19db58eebeba6527d5aa70a824996c9d4493ba994cc5b24b333aef4820a3cf3"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPronicNumber/BoundedPronicNumber_M1.java",
+      "bytes": 425,
+      "sha256": "1699ae1f939d501f5a6d1922a51292d2750dd45070302470670cb07f9f85568d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPronicNumber/BoundedPronicNumber_M2.java",
+      "bytes": 423,
+      "sha256": "6d64eba57d44114e0e59692e466a8e3c119540f9264782b143e42335cfbce893"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPronicNumber/BoundedPronicNumber_M3.java",
+      "bytes": 424,
+      "sha256": "1cafa27fa3bbcc737d72f3253e6b9f298ada61ecee06100b7f20e581eefcd1ef"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPronicNumber/BoundedPronicNumber_M4.java",
+      "bytes": 424,
+      "sha256": "58b6c2eefa2f35915f2dfe07444dff34dae4ee2a83823a0573af629a62279a4e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPronicNumber/BoundedPronicNumber_M5.java",
+      "bytes": 424,
+      "sha256": "d98ebdaf630a9dc5e0ff6c41e49a3171aed2d923d82c5c0a9d4e0c6cd7de5145"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPronicNumber/BoundedPronicNumber_M6.java",
+      "bytes": 424,
+      "sha256": "6877c92967ed21a6f208265a86d6d3f9844d6b568d91233c4dc75bfc0768f466"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedPronicNumber/FSF/BoundedPronicNumber_FSF.txt",
+      "bytes": 401,
+      "sha256": "b60038c12f8b1398c047dede8a12e013880e8c1df794430b579d61746eebb04a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedProperDivisorParity/BoundedProperDivisorParity.java",
+      "bytes": 484,
+      "sha256": "d92db56f955eb3e80cee27f0145533d03c72bc94d58da1d35e2ee529b9c4d181"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedProperDivisorParity/BoundedProperDivisorParity_M1.java",
+      "bytes": 485,
+      "sha256": "e7b74d43019107c800368a6a6c7da86c648ceea091728995b165c682e8cedf3e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedProperDivisorParity/BoundedProperDivisorParity_M2.java",
+      "bytes": 485,
+      "sha256": "8d2d8310e887f4a7f65b4f6169657fe4f456174f76f11cd705e789548d8ce67e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedProperDivisorParity/BoundedProperDivisorParity_M3.java",
+      "bytes": 484,
+      "sha256": "6984de4a8ee4d7857831070eedbd018d40348e14743cc109103a4a3d54f19f1f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedProperDivisorParity/BoundedProperDivisorParity_M4.java",
+      "bytes": 488,
+      "sha256": "ea48aa3378dc7e35019901ce305ce92810220b0b780d8039c3d210d09706286e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedProperDivisorParity/BoundedProperDivisorParity_M5.java",
+      "bytes": 484,
+      "sha256": "77bdb79c6b14fe9780a6358aaca258de9ea5ff2a6bfb30773058aa71190a4293"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedProperDivisorParity/BoundedProperDivisorParity_M6.java",
+      "bytes": 484,
+      "sha256": "a92e018c6e2c8a65c3a2f1f20f0142698ca7ad168b768c41051606c49289f7ec"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedProperDivisorParity/FSF/BoundedProperDivisorParity_FSF.txt",
+      "bytes": 976,
+      "sha256": "6862e75378d85ef4ccaf4460db0b66c2b671c8212f1e0603bd8af90489f4aea6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedSquareFreeClassifier/BoundedSquareFreeClassifier.java",
+      "bytes": 535,
+      "sha256": "931bffa153a277fc083e927119c36c790adee402300072226477f788e5f5605c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M1.java",
+      "bytes": 536,
+      "sha256": "6b1f9cbb662253c2019a4819fe1ff768087ea40581899bc6bf06403edfb3ea44"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M2.java",
+      "bytes": 534,
+      "sha256": "38f1aa4375af7239b5ce39dd6a4f31a2822d8afd82a5443380dc72af1bc5eb04"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M3.java",
+      "bytes": 535,
+      "sha256": "98f88449e55a6b0a42eb43694157e02dee1680030e5296368bca3d66d84a808f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M4.java",
+      "bytes": 535,
+      "sha256": "44960293536b2d819e92e466f65fe35bc4baec656075c6b11c28b261afa14977"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M5.java",
+      "bytes": 535,
+      "sha256": "ca881e2a0ff809f38f9338c1e04e7b3a1355b99fa508ff142998d680d5e056c2"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedSquareFreeClassifier/BoundedSquareFreeClassifier_M6.java",
+      "bytes": 535,
+      "sha256": "c8d8625109e7a8185904fc7375fbaebc7499c3c024aad2ca4b63b5b572e5dab2"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BoundedSquareFreeClassifier/FSF/BoundedSquareFreeClassifier_FSF.txt",
+      "bytes": 2126,
+      "sha256": "0ff408325fac9146523529177d5823731e985144b42b21f3ccb27a45b6a47eff"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BubbleSort/BubbleSortFive.java",
+      "bytes": 1149,
+      "sha256": "c2f51bde02e74614e632607c91468048fa085aace472f619c2ef507ee53af735"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BubbleSort/BubbleSortFive_M1.java",
+      "bytes": 1149,
+      "sha256": "10554f0cea92570c282df6f2422af4855d4619eaaaed848bbe00630908d067bf"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BubbleSort/BubbleSortFive_M2.java",
+      "bytes": 1149,
+      "sha256": "73ce9601ded1d9f09c519671f62e5640be5f62625465c590c96d7b28667ef5e3"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BubbleSort/BubbleSortFive_M3.java",
+      "bytes": 1150,
+      "sha256": "49cf507057bd7be3cc02b396ebf73865a35b41d5eed0b207adc961ba31c2ece4"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BubbleSort/BubbleSortFive_M4.java",
+      "bytes": 1149,
+      "sha256": "8ccb917266424bdef637516a4003083ea001efef5f8c2efbaa0a56d238669f70"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BubbleSort/BubbleSortFive_M5.java",
+      "bytes": 1149,
+      "sha256": "d1d8b6356a87166b3cec74682683f9f77f42cbf0a96e7d21105a6ede37b38fe8"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BubbleSort/BubbleSortFive_M6.java",
+      "bytes": 1149,
+      "sha256": "e3598713acc0e67385bf37d8c21a6062fb422fefae624da2847a5a4e6d5a8817"
+    },
+    {
+      "path": "benchmarks/EX_CSC/BubbleSort/FSF/BubbleSortFive_FSF.txt",
+      "bytes": 47,
+      "sha256": "fc7d0b43c5dda56dc9a6fa5e871676b313fe55da9363ea312207d79d6d33fcfc"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GappedSwapFive/FSF/GappedSwapFive_FSF.txt",
+      "bytes": 40,
+      "sha256": "7d95fc0891625c011616cc049c98243f6caab2fd1acae40aaef4689d3e8e27ae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GappedSwapFive/GappedSwapFive.java",
+      "bytes": 1150,
+      "sha256": "87ef65cdf87c3dbe0b9695b106f3865735726d26c97a8bd3413e560842ec6f47"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GappedSwapFive/GappedSwapFive_M1.java",
+      "bytes": 1150,
+      "sha256": "a878d022980005331a7839b01fc39f064274b829cd7cebd316715bc81bf58669"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GappedSwapFive/GappedSwapFive_M2.java",
+      "bytes": 1150,
+      "sha256": "95729f87e41c482eec2f170da88c8c6430cb0e37fb51db7a4eae43b7c27ec1f4"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GappedSwapFive/GappedSwapFive_M3.java",
+      "bytes": 1151,
+      "sha256": "8cf23bf4adfe2f87d51b2bc530ee468e2156c51d2236ab676e90fb5ee6c8dd40"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GappedSwapFive/GappedSwapFive_M4.java",
+      "bytes": 1150,
+      "sha256": "c99208a7ac1b626a39dd6c5dcc07f94f04023b971ac8d0223547ab47625a9cdc"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GappedSwapFive/GappedSwapFive_M5.java",
+      "bytes": 1150,
+      "sha256": "c7b608bbbcd4749c679424b15d53da44df22c539e422b9bcc183b35b36eca4eb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GappedSwapFive/GappedSwapFive_M6.java",
+      "bytes": 1140,
+      "sha256": "f79c6bab059ea38a1b59c277747aba093e893bee9b4f2e94861fe0b65bb4ed87"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GradePolicy/FSF/GradePolicy_FSF.txt",
+      "bytes": 1063,
+      "sha256": "44eb8c97dec42dc034a15e548dd744276ce328fa98f7bc841cf2dcb4c2947e71"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GradePolicy/GradePolicy.java",
+      "bytes": 697,
+      "sha256": "49437844bf226e39ca2c06f56c7a0d26c76bc2e73a3732566c99d35c69a6beae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GradePolicy/GradePolicy_M1.java",
+      "bytes": 698,
+      "sha256": "6c0bda507a7e21de2e83faad58ce3ca86abacfe221fa6687437cc08b7897e791"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GradePolicy/GradePolicy_M2.java",
+      "bytes": 698,
+      "sha256": "15da4fb10b3c7c5a4f4a67fbc29328c75a4b3fbf697e73d30780e5945b9e2bdb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GradePolicy/GradePolicy_M3.java",
+      "bytes": 696,
+      "sha256": "f1ada883771dfb8a7981464629d64f85e1378b55aef28749765cad248b5ee6e6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GradePolicy/GradePolicy_M4.java",
+      "bytes": 697,
+      "sha256": "8289426c30c7d408827b9cf590035349ac2e5261f6401c835855c523f1ac0805"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GradePolicy/GradePolicy_M5.java",
+      "bytes": 697,
+      "sha256": "f8e894610e80550db9f845137518772f71f27d487f434eb7e22d358bc9c6a567"
+    },
+    {
+      "path": "benchmarks/EX_CSC/GradePolicy/GradePolicy_M6.java",
+      "bytes": 701,
+      "sha256": "cafb77cad458e30c8967fbaa037171361fbbff91ff394f1cde970d0bd47cf953"
+    },
+    {
+      "path": "benchmarks/EX_CSC/InventoryReorder/FSF/InventoryReorder_FSF.txt",
+      "bytes": 1241,
+      "sha256": "2d272be5d48e460eebc7239b19b954635a494f076db4d03a9ed5f96fce45341d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/InventoryReorder/InventoryReorder.java",
+      "bytes": 695,
+      "sha256": "7e01a631f8508f7ad8fcf429b1df72cc819f7a4fb22fd2d6bc2388793c37d045"
+    },
+    {
+      "path": "benchmarks/EX_CSC/InventoryReorder/InventoryReorder_M1.java",
+      "bytes": 696,
+      "sha256": "8175cad0ab41c9e5a87e31eab7a89cde2826857dfb1118966acc3270531e04f8"
+    },
+    {
+      "path": "benchmarks/EX_CSC/InventoryReorder/InventoryReorder_M2.java",
+      "bytes": 696,
+      "sha256": "564dfbb89bfac1d95a05b9398ee97f23ea19a29570c5cdca5269fd8eae4f6f41"
+    },
+    {
+      "path": "benchmarks/EX_CSC/InventoryReorder/InventoryReorder_M3.java",
+      "bytes": 696,
+      "sha256": "796b8a91a6b7367bd7593f0f94d6e85dff892a255911ff5393e7e31cbd94a72f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/InventoryReorder/InventoryReorder_M4.java",
+      "bytes": 695,
+      "sha256": "967a88dcb75309a2b8480793369eeb99de9a7ba9206790b684fc08fa1aaa5bc5"
+    },
+    {
+      "path": "benchmarks/EX_CSC/InventoryReorder/InventoryReorder_M5.java",
+      "bytes": 695,
+      "sha256": "9b088be76ea55b34671f1b4bcaff712e07d51bd488200f1a1a0dd2e22b4829b5"
+    },
+    {
+      "path": "benchmarks/EX_CSC/InventoryReorder/InventoryReorder_M6.java",
+      "bytes": 699,
+      "sha256": "ff62624249bb6d4c00228d2ee8aefe9060b40aef49daf5875a22fa742c77c29e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopBubbleSortFive/FSF/LoopBubbleSortFive_FSF.txt",
+      "bytes": 40,
+      "sha256": "7d95fc0891625c011616cc049c98243f6caab2fd1acae40aaef4689d3e8e27ae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopBubbleSortFive/LoopBubbleSortFive.java",
+      "bytes": 771,
+      "sha256": "875049358087e604a04a9c957ca5912377b4285dcd25d86c39fc7e9689b3c554"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopBubbleSortFive/LoopBubbleSortFive_M1.java",
+      "bytes": 771,
+      "sha256": "10dcc0ba5dc819713cdf677f7ce9d523779ca5c7b84bd05a69ee2c04b573599c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopBubbleSortFive/LoopBubbleSortFive_M2.java",
+      "bytes": 771,
+      "sha256": "c97a07afdcc91f58159d3f1296577606b64554890e130515a3435b2e42da2ee9"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopBubbleSortFive/LoopBubbleSortFive_M3.java",
+      "bytes": 771,
+      "sha256": "5b7452f264650bc2e4b53b2089fc4910f3f2f43111dc7b18c1727c3cd7035b30"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopBubbleSortFive/LoopBubbleSortFive_M4.java",
+      "bytes": 771,
+      "sha256": "ab97ee547533b1ecde7a56a415ff17598350dbc87ba7a7b77cd498e755ae6df8"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopBubbleSortFive/LoopBubbleSortFive_M5.java",
+      "bytes": 774,
+      "sha256": "632e117e18273b5dbac39c80286848414d52189ecc1a8d087a39f995b401d2db"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopBubbleSortFive/LoopBubbleSortFive_M6.java",
+      "bytes": 771,
+      "sha256": "aacd34979901fa4108bec8d870a92130b64c04afe7c177592f0981ff2ea3a0d6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopSelectionSortFive/FSF/LoopSelectionSortFive_FSF.txt",
+      "bytes": 40,
+      "sha256": "7d95fc0891625c011616cc049c98243f6caab2fd1acae40aaef4689d3e8e27ae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopSelectionSortFive/LoopSelectionSortFive.java",
+      "bytes": 1799,
+      "sha256": "aaebd1cb15dee8118c8bb08f94c01208b53bab376d7dc20b86fe66b68fe8ffb7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopSelectionSortFive/LoopSelectionSortFive_M1.java",
+      "bytes": 1799,
+      "sha256": "87c89978c0322bb1cc72fd47009e869fa11978627d8af4eeeab0295bfecd7683"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopSelectionSortFive/LoopSelectionSortFive_M2.java",
+      "bytes": 1799,
+      "sha256": "8fe7dc5e997e630573a2ab0549c315eff1fbb6fd68cc41d4c11b004dbf102327"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopSelectionSortFive/LoopSelectionSortFive_M3.java",
+      "bytes": 1799,
+      "sha256": "8fa388b64a5bbfb039fc3f13fd5e810f86504717667d241b213778a7b361e6f3"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopSelectionSortFive/LoopSelectionSortFive_M4.java",
+      "bytes": 1799,
+      "sha256": "14abdbdca13769e7b9cbd631aec5a1eddaa67b82399f050212441ae159af5604"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopSelectionSortFive/LoopSelectionSortFive_M5.java",
+      "bytes": 1802,
+      "sha256": "b9d8e71b19dbad1d6fa65a0fc1e565b0eb07645fa6a1d6b7724bae46f38b4a16"
+    },
+    {
+      "path": "benchmarks/EX_CSC/LoopSelectionSortFive/LoopSelectionSortFive_M6.java",
+      "bytes": 1799,
+      "sha256": "763585c0d0d640cbc183cdc56ff2f35cbbd0e52a19e70110072e6223029d0230"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MarginAdjustLoop/FSF/MarginAdjustLoop_FSF.txt",
+      "bytes": 592,
+      "sha256": "3e8f6ef41314e92f28cc5ea2049396cf2aca1e35072862c9c01ffa72279fa928"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MarginAdjustLoop/MarginAdjustLoop.java",
+      "bytes": 648,
+      "sha256": "1205dbbc62053f470c920c594d668f91c8b97ebfff68bf4541d311c0263e3d84"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MarginAdjustLoop/MarginAdjustLoop_M1.java",
+      "bytes": 649,
+      "sha256": "2ea7f7ad410055ed01bd5f2aa3bab5d6fb2b21d9faec5a71b365a88e559ef688"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MarginAdjustLoop/MarginAdjustLoop_M2.java",
+      "bytes": 649,
+      "sha256": "4b9a323a38fb7a0436ede2ecc6f2ac6672e6a7e52ddc6801c0d1a93ca552e937"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MarginAdjustLoop/MarginAdjustLoop_M3.java",
+      "bytes": 649,
+      "sha256": "e607a48395e4c4a59172893008a1f30395b2e807206eb5e268841927a044bd50"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MarginAdjustLoop/MarginAdjustLoop_M4.java",
+      "bytes": 648,
+      "sha256": "fe6320086405e84fb062b62d1455d795a8a19a54aff0b5fd064cb0e6dd1b7e3a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MarginAdjustLoop/MarginAdjustLoop_M5.java",
+      "bytes": 652,
+      "sha256": "aedca611de4cd901fc1a9332424c68f7928a7862ae0196bd77f0f0b45dab9937"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MarginAdjustLoop/MarginAdjustLoop_M6.java",
+      "bytes": 652,
+      "sha256": "6e23ddd73cc2476000a97cecf894107408bd1646013b9d9a744077d7dadf2a9c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MaxOfFive/FSF/MaxOfFive_FSF.txt",
+      "bytes": 228,
+      "sha256": "dacebbdcfbea6e64a335210a0b1c9e15bf238e3d601f0babfe800373f5abb3eb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MaxOfFive/MaxOfFive.java",
+      "bytes": 1002,
+      "sha256": "8488766165e8eef4603646f1d84926d20fbb760857650c776efc96d48232bbb1"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MaxOfFive/MaxOfFive_M1.java",
+      "bytes": 1002,
+      "sha256": "187fbcd33d0c5ee2fb751ea3c2e48cbd24628e6397c7e5cf21129a098cd28843"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MaxOfFive/MaxOfFive_M2.java",
+      "bytes": 1002,
+      "sha256": "39d0b4dfd57b822aa7ad7984a342590b779d1d62717c0549042ba3ff5c693f9d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MaxOfFive/MaxOfFive_M3.java",
+      "bytes": 1003,
+      "sha256": "8c276f3add19a0e429bf787318aec66068e79536054a3e7d1d9af785afb3509d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MaxOfFive/MaxOfFive_M4.java",
+      "bytes": 1002,
+      "sha256": "d102006ee64d0ab8146587ab211d7fa792669f4ef69fbc785337fd40b893167f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MaxOfFive/MaxOfFive_M5.java",
+      "bytes": 1002,
+      "sha256": "c48744987ebb5a946b41f6d0867f568613ac942bcb8962a4019dd0325a9b1b05"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MaxOfFive/MaxOfFive_M6.java",
+      "bytes": 1002,
+      "sha256": "b6e8d57601cff9954b20a960a2ab694b186bf4f4b03e0d08de36a89d8a1ce104"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianOfSix/FSF/MedianOfSix_FSF.txt",
+      "bytes": 87,
+      "sha256": "d1cec9947f14c43526cd6e2ec3c65f849dc27649102d053af76d952ac2cd9e4d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianOfSix/MedianOfSix.java",
+      "bytes": 1407,
+      "sha256": "bd38d5431420eeee556239a616906e2f8ec53878dd8565dfefcecf5705f7b6b0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianOfSix/MedianOfSix_M1.java",
+      "bytes": 1407,
+      "sha256": "d24de54d09de2772c58b997bbd848eb0e179e587c882db0cd4fb0c2f9a6770f2"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianOfSix/MedianOfSix_M2.java",
+      "bytes": 1407,
+      "sha256": "e24b3ade65bb12227e5f7d08f894546a79c6cc0586f2972302e72722c20c42a2"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianOfSix/MedianOfSix_M3.java",
+      "bytes": 1408,
+      "sha256": "d05456c5ac4edab8f273acd45f280fede7b1d477c5b6564f46de9e9be8cdee27"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianOfSix/MedianOfSix_M4.java",
+      "bytes": 1407,
+      "sha256": "9e2fbebad17a5818b0ba351bd2e50f2f63d980f7be85edddc0d5fbd06eb3d7f0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianOfSix/MedianOfSix_M5.java",
+      "bytes": 1407,
+      "sha256": "57694999e464406d7357f198cd80fbbe080ed3f6675f3a06272e16b20670ed57"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianOfSix/MedianOfSix_M6.java",
+      "bytes": 1407,
+      "sha256": "dcb054d914d594703f0943f05e22d576a7d1f9c8cf94a9b41d58bd89130d886c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianWindowFive/FSF/MedianWindowFive_FSF.txt",
+      "bytes": 1427,
+      "sha256": "fd7f9a80afb29f31e980c039b008eed6b1a512f9f2c566ba5931658aad5f3e40"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianWindowFive/MedianWindowFive.java",
+      "bytes": 816,
+      "sha256": "1372b990d91a9a337a2d8d718a0959db6f90e799facc2ae04e0b1585f7baac0c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianWindowFive/MedianWindowFive_M1.java",
+      "bytes": 816,
+      "sha256": "8c261ee3707c65a2d3f0d728f4012f7b08ecad03b78107a3f51c3ffc4a7bb3ff"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianWindowFive/MedianWindowFive_M2.java",
+      "bytes": 816,
+      "sha256": "e4e42984de5039c9e776c95089d0c5df2504052a8c559c67ee86e484e9c4e543"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianWindowFive/MedianWindowFive_M3.java",
+      "bytes": 817,
+      "sha256": "e86aae367fadeece231144ad902f33cd98dc8e8abf89e95e514b7d73bff6237c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianWindowFive/MedianWindowFive_M4.java",
+      "bytes": 816,
+      "sha256": "c83ef0026ddfda5775799a1ece10aae93b31bf24eadfd7a56b747b4b746ab174"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianWindowFive/MedianWindowFive_M5.java",
+      "bytes": 816,
+      "sha256": "721a38f64139a48821e99ab7ea5a9a4695ccc1718a2d9e48aad5797179073d76"
+    },
+    {
+      "path": "benchmarks/EX_CSC/MedianWindowFive/MedianWindowFive_M6.java",
+      "bytes": 816,
+      "sha256": "4a0aa3228417ff789ec0a5d819189cdbf1cdbad0d86bc46a4d5f91c9c6f76711"
+    },
+    {
+      "path": "benchmarks/EX_CSC/OddEvenSortFive/FSF/OddEvenSortFive_FSF.txt",
+      "bytes": 40,
+      "sha256": "7d95fc0891625c011616cc049c98243f6caab2fd1acae40aaef4689d3e8e27ae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/OddEvenSortFive/OddEvenSortFive.java",
+      "bytes": 875,
+      "sha256": "83835cd48f60192e685b37c643d806c7e0d288f8005fb66236a9fe0daf02be78"
+    },
+    {
+      "path": "benchmarks/EX_CSC/OddEvenSortFive/OddEvenSortFive_M1.java",
+      "bytes": 875,
+      "sha256": "cebfb47d98ee2e6c7da92bb24c37d00327197c3791fe2e7cd448069a9273aaee"
+    },
+    {
+      "path": "benchmarks/EX_CSC/OddEvenSortFive/OddEvenSortFive_M2.java",
+      "bytes": 875,
+      "sha256": "cb465a8b242b1314da34cdd81060fad716843c53e3003e1dfe03227b0b119a57"
+    },
+    {
+      "path": "benchmarks/EX_CSC/OddEvenSortFive/OddEvenSortFive_M3.java",
+      "bytes": 875,
+      "sha256": "4f9e5cb18077322ffdaba1115db92609e589fcd0df7d3048ec59abaf3e3ebf0e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/OddEvenSortFive/OddEvenSortFive_M4.java",
+      "bytes": 875,
+      "sha256": "26a63ec4d89542dfd858c8b42b038a3bc31eba09898849b7038e50b816d8bd88"
+    },
+    {
+      "path": "benchmarks/EX_CSC/OddEvenSortFive/OddEvenSortFive_M5.java",
+      "bytes": 878,
+      "sha256": "e9dbc59300b0bb214822cff36af4ea73ee8aee9c2ee72c1b6e40e656b180c604"
+    },
+    {
+      "path": "benchmarks/EX_CSC/OddEvenSortFive/OddEvenSortFive_M6.java",
+      "bytes": 875,
+      "sha256": "7d1bb2af1297a4cdde450cea2c4193e547823f188da9618bc789b28c902824a9"
+    },
+    {
+      "path": "benchmarks/EX_CSC/PairSortCheck/FSF/PairSortCheck_FSF.txt",
+      "bytes": 40,
+      "sha256": "7d95fc0891625c011616cc049c98243f6caab2fd1acae40aaef4689d3e8e27ae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/PairSortCheck/PairSortCheck.java",
+      "bytes": 1049,
+      "sha256": "8d5298d5a34f24c61a419a15a8931934418b07bddc3b8203740aabd91a4a928f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/PairSortCheck/PairSortCheck_M1.java",
+      "bytes": 1049,
+      "sha256": "d7c8e71e3818864ab843062213a5e843ad2f74aafa366e14ad5c77ecf78cf00c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/PairSortCheck/PairSortCheck_M2.java",
+      "bytes": 1049,
+      "sha256": "042737a3a8bf962ac690a1899f00f4bb02b5ad601a205c2f299cf0c83fed56e0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/PairSortCheck/PairSortCheck_M3.java",
+      "bytes": 1050,
+      "sha256": "8d498df59d785a3c969e1bb3677810cf48c43f15abc857d916c43db0476bcddf"
+    },
+    {
+      "path": "benchmarks/EX_CSC/PairSortCheck/PairSortCheck_M4.java",
+      "bytes": 1049,
+      "sha256": "81355fd4456f92fb102b4f2f49c33e226b73d0a9cbe56ce8af04d6b8d4ed26a6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/PairSortCheck/PairSortCheck_M5.java",
+      "bytes": 1049,
+      "sha256": "601db6128dc85aa6199762dd629501588736a41fcea6d641820ffdd61921d89f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/PairSortCheck/PairSortCheck_M6.java",
+      "bytes": 1039,
+      "sha256": "ac826a797472dce65642ee1523b2ab6a68278530fe63cbc9ccb908bb12d5451e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/README.md",
+      "bytes": 6134,
+      "sha256": "7271d6bf290cdc142b2b45fc4cf4c23bba6be7729f4e5315f4a8920692f0030c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/RewardCapLoop/FSF/RewardCapLoop_FSF.txt",
+      "bytes": 920,
+      "sha256": "56ddf1657861f1a9fd77e9c255f195c4ec4583e52c6bb0ef72ee9863e10670f2"
+    },
+    {
+      "path": "benchmarks/EX_CSC/RewardCapLoop/RewardCapLoop.java",
+      "bytes": 701,
+      "sha256": "de416f26d3637a19532275c8886225611165e0ccd94654cfdbe001ca05e6039c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/RewardCapLoop/RewardCapLoop_M1.java",
+      "bytes": 702,
+      "sha256": "c7447bc88ad5c2cf6d8dc9d6a9faeef46575d3720898a1b291a521198bc6401f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/RewardCapLoop/RewardCapLoop_M2.java",
+      "bytes": 702,
+      "sha256": "0f2986070e1a053e8b9ac06396f1e68443c78e12da664d4e8c7e609718c69349"
+    },
+    {
+      "path": "benchmarks/EX_CSC/RewardCapLoop/RewardCapLoop_M3.java",
+      "bytes": 702,
+      "sha256": "5cea4383180efc7f8ad4634e768166ad3adf17072b6222a6a571bc0c76cec320"
+    },
+    {
+      "path": "benchmarks/EX_CSC/RewardCapLoop/RewardCapLoop_M4.java",
+      "bytes": 701,
+      "sha256": "c00318bccca000d62fee055f24d66132fdae28e1dd135bf4e5c3e07f2b28835b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/RewardCapLoop/RewardCapLoop_M5.java",
+      "bytes": 701,
+      "sha256": "06e6b49194dc660020bbb0ec5914edfd7d59608bced821bccf71f7c4ee3a3472"
+    },
+    {
+      "path": "benchmarks/EX_CSC/RewardCapLoop/RewardCapLoop_M6.java",
+      "bytes": 705,
+      "sha256": "0fcb64ea6c9b6a82b61f105ce80045e2d8061a876845087802102685ce0a6408"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatedIntPower/FSF/SaturatedIntPower_FSF.txt",
+      "bytes": 5251,
+      "sha256": "5b002f5b983008532870901da59e47c9735033815adf0bfd226aad57e24f7649"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatedIntPower/SaturatedIntPower.java",
+      "bytes": 799,
+      "sha256": "f68290d36a39c076da5a74bc2ce85dbd9ebafbff667b1dca36f42b322fc350e6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatedIntPower/SaturatedIntPower_M1.java",
+      "bytes": 800,
+      "sha256": "e58c1e7fef1d8399d538da6a2dbc452c2bbb055c8e71c86926ff1e2ce9139e2f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatedIntPower/SaturatedIntPower_M2.java",
+      "bytes": 800,
+      "sha256": "2235d2385b8a6fb853f0720532c28d0680eef3bff9afe03db5642dacf92e0776"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatedIntPower/SaturatedIntPower_M3.java",
+      "bytes": 800,
+      "sha256": "1c678f9b7b3dc68be0d61214219d0af7c9e6c414da470cd80e4d3b9d004231b7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatedIntPower/SaturatedIntPower_M4.java",
+      "bytes": 799,
+      "sha256": "48f64b68578614017aa056ed97bdffd4585fcd65b822682856ed35199ac058be"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatedIntPower/SaturatedIntPower_M5.java",
+      "bytes": 799,
+      "sha256": "7c6de351ce400ca455eee4f9897c491efe34bbe655c78c20623c156d05f06581"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatedIntPower/SaturatedIntPower_M6.java",
+      "bytes": 799,
+      "sha256": "a1f64c3f583b988b627b07f0f0290e849dd9d09071a55da1186ef26251c43333"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatingPenaltyLoop/FSF/SaturatingPenaltyLoop_FSF.txt",
+      "bytes": 681,
+      "sha256": "b821601e75df8c98fa41f54eeadaa63da50ccbc17e42e26bbc189b35df191211"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatingPenaltyLoop/SaturatingPenaltyLoop.java",
+      "bytes": 624,
+      "sha256": "56d9e7199540c95c27cc88aa5b8eb470feb57a54af1efaadb9a5d7cd08565c46"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatingPenaltyLoop/SaturatingPenaltyLoop_M1.java",
+      "bytes": 625,
+      "sha256": "2cb4be86f78ce9f7af8a04f59d29c0dbf8ab984417b6d4406648ecce9de7cad0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatingPenaltyLoop/SaturatingPenaltyLoop_M2.java",
+      "bytes": 625,
+      "sha256": "b2f450ff0f5cf08640a600233112326e77b523ff2d9c8046c2aa22df80b9a49f"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatingPenaltyLoop/SaturatingPenaltyLoop_M3.java",
+      "bytes": 625,
+      "sha256": "f13686632b8dba0ecb794d8c88cbf9e76f93bbe2a844836a036a5703bf5fa369"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatingPenaltyLoop/SaturatingPenaltyLoop_M4.java",
+      "bytes": 624,
+      "sha256": "c705242736a1f42e63e9b02626557d6ff44a657af94600dde0ffed0607482840"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatingPenaltyLoop/SaturatingPenaltyLoop_M5.java",
+      "bytes": 624,
+      "sha256": "cc4e7e75a5db20ea83072daa0e10e49aa24926783cd8e8892a7c8d1237ce5cc5"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SaturatingPenaltyLoop/SaturatingPenaltyLoop_M6.java",
+      "bytes": 628,
+      "sha256": "99ddc19942f1a6f4f09b085319e4f9a4cb9302f39cd24bb3fb08f05507f5c271"
+    },
+    {
+      "path": "benchmarks/EX_CSC/ScoreNormalizer/FSF/ScoreNormalizer_FSF.txt",
+      "bytes": 1021,
+      "sha256": "ad1fd86fb583d07fd9a44b45e5132f71a9acf37f79ffc52bbae20b9c82e93f54"
+    },
+    {
+      "path": "benchmarks/EX_CSC/ScoreNormalizer/ScoreNormalizer.java",
+      "bytes": 766,
+      "sha256": "eecb229482331bcdc16e618313f188bcdc887e00fe250f2cbe9789d6a3bb55e1"
+    },
+    {
+      "path": "benchmarks/EX_CSC/ScoreNormalizer/ScoreNormalizer_M1.java",
+      "bytes": 767,
+      "sha256": "423af99aa1a51b006e35c3f5fddabb3d2f044623f9db01acfab1a0bf6d0cfdd0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/ScoreNormalizer/ScoreNormalizer_M2.java",
+      "bytes": 767,
+      "sha256": "cc4259db1154e117561b307ff40d8a71bd517e068c5912ce842259aacf4f5945"
+    },
+    {
+      "path": "benchmarks/EX_CSC/ScoreNormalizer/ScoreNormalizer_M3.java",
+      "bytes": 767,
+      "sha256": "9fc27d876366e05493bd8700125a6cf4e1e1b1b1f5c41363089dd75e50709ebe"
+    },
+    {
+      "path": "benchmarks/EX_CSC/ScoreNormalizer/ScoreNormalizer_M4.java",
+      "bytes": 766,
+      "sha256": "87842e8b193f2945505e627d1977eee9a1f21854a43b78084496627b5d1204c9"
+    },
+    {
+      "path": "benchmarks/EX_CSC/ScoreNormalizer/ScoreNormalizer_M5.java",
+      "bytes": 766,
+      "sha256": "eb4aae827bb98c1e2bfd746522dace46e62f6db1e7940eea36db0972136dfa2b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/ScoreNormalizer/ScoreNormalizer_M6.java",
+      "bytes": 769,
+      "sha256": "2c11dbfd54ceed176c7a9676d74b7aa751dec493f3126621cae3db9a06af99d7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SelectionSort/FSF/SelectionSortFive_FSF.txt",
+      "bytes": 47,
+      "sha256": "fc7d0b43c5dda56dc9a6fa5e871676b313fe55da9363ea312207d79d6d33fcfc"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SelectionSort/SelectionSortFive.java",
+      "bytes": 1701,
+      "sha256": "4dcf95669755aec7018a9a9bf3a130effc2723013016359b3f71026cf80e8ffa"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SelectionSort/SelectionSortFive_M1.java",
+      "bytes": 1605,
+      "sha256": "1f7c5031ce678dc91c46ec2cb5967afea659f6a0b5665628999560d0ced3d0e9"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SelectionSort/SelectionSortFive_M2.java",
+      "bytes": 1605,
+      "sha256": "d54160b8f692ddc73b5192dd0472cfafec873299de8e7679b6df048d04008a38"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SelectionSort/SelectionSortFive_M3.java",
+      "bytes": 1605,
+      "sha256": "cd9d63c9b3dfbc6f714585c4cea6273009431cc64af02c5d59ea3276458f6613"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SelectionSort/SelectionSortFive_M4.java",
+      "bytes": 1605,
+      "sha256": "6bf946ba6dde5f2f991c21bda4c58ea9012d03479fc2d1dd971d7ccf1fd6504b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SelectionSort/SelectionSortFive_M5.java",
+      "bytes": 1605,
+      "sha256": "a0223b92a88cfb31389c84aae3e700587025b76a329415d8da2960d97f018683"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SelectionSort/SelectionSortFive_M6.java",
+      "bytes": 1605,
+      "sha256": "6bd83f231d36c6f849930af02edf826870e4e2fbe4bf43fa69ca57dcc609b4d3"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SubtractLoop/FSF/SubtractLoop_FSF.txt",
+      "bytes": 160,
+      "sha256": "f2e548f75aabb5477c67f42f27072c86f6e68a9c8ecaf9177cdba823ce7a577c"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SubtractLoop/SubtractLoop.java",
+      "bytes": 578,
+      "sha256": "627b5c80d274dfe9a259f6853b90b2f215db4d422ac6018c3bf1b9b6e094d730"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SubtractLoop/SubtractLoop_M1.java",
+      "bytes": 579,
+      "sha256": "b54204291a67145ba07f264ed3df2876c43addd79f857f0b8328ed918e9d0502"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SubtractLoop/SubtractLoop_M2.java",
+      "bytes": 579,
+      "sha256": "b6414211910bffb0433218ea006645f2bce1b9dbe1ef85374e205205b177e61d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SubtractLoop/SubtractLoop_M3.java",
+      "bytes": 579,
+      "sha256": "c6d049eda5535e64726f385598b5fa940c7e996b6af8fc7492939e0183893794"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SubtractLoop/SubtractLoop_M4.java",
+      "bytes": 578,
+      "sha256": "0cc98baf4dd2792f44236a9d0f4b3c9d58f32363651019ce9eb8bd3977986bfa"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SubtractLoop/SubtractLoop_M5.java",
+      "bytes": 578,
+      "sha256": "7dae840cb8366531fc0781af9cdffb5d14cd4c541854eda360a1dddc8bd2273e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/SubtractLoop/SubtractLoop_M6.java",
+      "bytes": 578,
+      "sha256": "8c4c918b7c0c81e8abf3a86c38084090850be8cfb6b121f1239caa77398e2804"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TailRotateSortFive/FSF/TailRotateSortFive_FSF.txt",
+      "bytes": 40,
+      "sha256": "7d95fc0891625c011616cc049c98243f6caab2fd1acae40aaef4689d3e8e27ae"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TailRotateSortFive/TailRotateSortFive.java",
+      "bytes": 733,
+      "sha256": "e51945eed4366b1c282dba00804426c6ea5f5a3e81bdced2d5fb7d642a912048"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TailRotateSortFive/TailRotateSortFive_M1.java",
+      "bytes": 733,
+      "sha256": "6c4317817875fd650cdd970f0a7d47f0465f65eb666b296fb5890404c007a182"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TailRotateSortFive/TailRotateSortFive_M2.java",
+      "bytes": 733,
+      "sha256": "e0c92a3e7aa61f532286310ddd35454c6714be5ff704dea2906610d612a2ea63"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TailRotateSortFive/TailRotateSortFive_M3.java",
+      "bytes": 733,
+      "sha256": "adf008d4112aed25ace3672589dbbda47efd635602acac94059f7dc8d8211ce8"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TailRotateSortFive/TailRotateSortFive_M4.java",
+      "bytes": 733,
+      "sha256": "e35e84373ff6bb36cdbbbd79a5511d9a8a62c0902c80a40a6c49b148b19544b7"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TailRotateSortFive/TailRotateSortFive_M5.java",
+      "bytes": 733,
+      "sha256": "04244d7aa37706493d187483ffb8f7c4dcdda29d92c4cdc068dbb3799dcad0e4"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TailRotateSortFive/TailRotateSortFive_M6.java",
+      "bytes": 733,
+      "sha256": "5334d610b56b7a0ab90d44f2a7abba3efe5107ad3ea70fe39f281a2e6d45d423"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TaxBracket/FSF/TaxBracket_FSF.txt",
+      "bytes": 685,
+      "sha256": "cbe98bc646b1d5ac12d6bdb383cd071b0f3d77f7ed7241ecfafbf80607f91f29"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TaxBracket/TaxBracket.java",
+      "bytes": 836,
+      "sha256": "b4b816848afa74bde9be096f94cd122ed57ce1a0e55e804fd603d1d2f19e3782"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TaxBracket/TaxBracket_M1.java",
+      "bytes": 837,
+      "sha256": "d3f8ada7c06d5e9bd5d055054aad3b7fb477b36277a279e28040c3e2ba24441b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TaxBracket/TaxBracket_M2.java",
+      "bytes": 837,
+      "sha256": "95ea49ef035a9e5a6f4c0ae585550ceaf53ff6bf6114e9e99ce8d66a606017f3"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TaxBracket/TaxBracket_M3.java",
+      "bytes": 835,
+      "sha256": "b8b6c6b6e509add53fe760d88e24c4671f9c3a7e12907892b9dc3f6880beb2c3"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TaxBracket/TaxBracket_M4.java",
+      "bytes": 836,
+      "sha256": "5497a9b7b70702389994c92ccccc99647443bde9b6056296f90b80c06c1c5457"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TaxBracket/TaxBracket_M5.java",
+      "bytes": 840,
+      "sha256": "7573e477b8851c4ca1b6412ad706ad407b1f614853e45a50b19d3ded7ca7d946"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TaxBracket/TaxBracket_M6.java",
+      "bytes": 840,
+      "sha256": "31e969801df4831b5469d505edee1e3b5e23abd8ffc900a71e61192554f78872"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TicketPrice/FSF/TicketPrice_FSF.txt",
+      "bytes": 361,
+      "sha256": "56db5939843cf3c17977e27f1866e66202701e0192fa809a3c226d64dbc6dfe9"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TicketPrice/TicketPrice.java",
+      "bytes": 723,
+      "sha256": "8e0ee6291a814f4e019183a2e517dd8f88d1fdd9fbee3f706af6161151f4bc12"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TicketPrice/TicketPrice_M1.java",
+      "bytes": 724,
+      "sha256": "fc6bd8084f6d0f56d90ef5f334a3454299ad96144f00e814f7ced685a01dbcc6"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TicketPrice/TicketPrice_M2.java",
+      "bytes": 724,
+      "sha256": "5295d382dc13f7c3b8b1fba05bdc0a3a76c3e4ad0bd7aa072aacafab30a40ee4"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TicketPrice/TicketPrice_M3.java",
+      "bytes": 724,
+      "sha256": "aa80951b848b48158b3425e833510998ccbf0c42d99f95676add697680120d38"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TicketPrice/TicketPrice_M4.java",
+      "bytes": 723,
+      "sha256": "824f65f403f5ec3a5ced5dc9d07daac5b783a4a71fad107efeb7250d1a3a821d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TicketPrice/TicketPrice_M5.java",
+      "bytes": 727,
+      "sha256": "0fd44a9c67b0365e7b1b12a7e05f31e99638b2d4e5c2515cff8b53461d39b978"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TicketPrice/TicketPrice_M6.java",
+      "bytes": 727,
+      "sha256": "b53522077a325c618f5b5a80e5c3f67a3ea54cc778fdb4cc0bc901584427cdcb"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TwoBucketLoop/FSF/TwoBucketLoop_FSF.txt",
+      "bytes": 1271,
+      "sha256": "db0b35762efb2bad93783e4faf90dcdb50aaaa47a17f9e1e984df2960d9f213d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TwoBucketLoop/TwoBucketLoop.java",
+      "bytes": 683,
+      "sha256": "522143ff0974324ebc0726027c36afc56d4e01eb854161dd80e37a8e25198f67"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TwoBucketLoop/TwoBucketLoop_M1.java",
+      "bytes": 684,
+      "sha256": "07cbb008c8e69dd117c518af5a2a5a1706dc2b4be69e2847cf8f680e3b18ba90"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TwoBucketLoop/TwoBucketLoop_M2.java",
+      "bytes": 684,
+      "sha256": "de8f84208500e922dea56ce41d85d28d7bdd87b72546ad74645723758f29325e"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TwoBucketLoop/TwoBucketLoop_M3.java",
+      "bytes": 684,
+      "sha256": "95f14d3d20f4027bde344f5a812a5ca8c2d02f2fe668b4b0eb3774b1dce42b28"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TwoBucketLoop/TwoBucketLoop_M4.java",
+      "bytes": 683,
+      "sha256": "aaed593f6e6b7dfef07d1a51663cc526e871258d97bffc48956906f8a80629fe"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TwoBucketLoop/TwoBucketLoop_M5.java",
+      "bytes": 683,
+      "sha256": "8703e612d12c39f38c14b77853bc19ca63e0690ad8d9ef05d2dfd8915e44de3d"
+    },
+    {
+      "path": "benchmarks/EX_CSC/TwoBucketLoop/TwoBucketLoop_M6.java",
+      "bytes": 687,
+      "sha256": "a003f7b4ee60b6fcd2a616b771c6efb952211cdd94faa5322ac5974e8f8a599a"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WaterBillCaculator/FSF/WaterBillCaculator_FSF.txt",
+      "bytes": 299,
+      "sha256": "f09ce26c87ecd1d3f860a289a872c4d22b8533529c64ec594476062938c7d6e1"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WaterBillCaculator/WaterBillCaculator.java",
+      "bytes": 485,
+      "sha256": "097fc9df9aaee79f9e00779d52422abced659dff05994a4ef688eafdaa941775"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WaterBillCaculator/WaterBillCaculator_M1.java",
+      "bytes": 484,
+      "sha256": "ed36869d76ef50a92bde6e020ae557139d940c955f69455e48d436af0ba0b1d0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WaterBillCaculator/WaterBillCaculator_M2.java",
+      "bytes": 486,
+      "sha256": "bb96e83db6d9527dfe77af161ac48567b12839d14afa1980e5bcfcbe15a14488"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WaterBillCaculator/WaterBillCaculator_M3.java",
+      "bytes": 486,
+      "sha256": "f33814797fec9de1ef017f62da54816760ac0247a4327c981a7f8f6b4cae3149"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WaterBillCaculator/WaterBillCaculator_M4.java",
+      "bytes": 485,
+      "sha256": "3918dba1479ed46d11afff7f3ab84a8d2f3685cf4c485bee7379d16d992f544b"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WaterBillCaculator/WaterBillCaculator_M5.java",
+      "bytes": 485,
+      "sha256": "a5ca91b546f6ffb8608ea8c9e6d40c32f7c80eff52a1b97ff97fee9721025bb8"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WaterBillCaculator/WaterBillCaculator_M6.java",
+      "bytes": 488,
+      "sha256": "5381abbd08c7a7bffeb4781e77afc64e62e187988bd16490580e5d1f30501da4"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WeightedAddLoop/FSF/WeightedAddLoop_FSF.txt",
+      "bytes": 331,
+      "sha256": "2935f68028e3e643b53500c4e2ea36f98ab5519d257aa021493c99ff90446990"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WeightedAddLoop/WeightedAddLoop.java",
+      "bytes": 709,
+      "sha256": "ce878ffa10379e02244b2b3d5f04c380874b2d14a3feeb20d75a1cdf826a8fad"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WeightedAddLoop/WeightedAddLoop_M1.java",
+      "bytes": 710,
+      "sha256": "ece99c48c84b736b68c03e8602ec2a178f733265b21bfd6cf415ee8fec1350e0"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WeightedAddLoop/WeightedAddLoop_M2.java",
+      "bytes": 710,
+      "sha256": "6e29ba29f3fb2c00726633aed8e8ba787b1f873768f4e62ebd197e4fdca5f378"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WeightedAddLoop/WeightedAddLoop_M3.java",
+      "bytes": 710,
+      "sha256": "da418cfc5b5cddc781451c2e87c63bd3a9000d476bdb1086e444df11229c0658"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WeightedAddLoop/WeightedAddLoop_M4.java",
+      "bytes": 709,
+      "sha256": "8e84b45429718cb1dabfd5b2b5baad1ca18e0da15e0de03c2168221553bb85dc"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WeightedAddLoop/WeightedAddLoop_M5.java",
+      "bytes": 713,
+      "sha256": "48782985518f5ef4a83bb9b95e79d2047c2a30d266df65d5d820047f0a865cb2"
+    },
+    {
+      "path": "benchmarks/EX_CSC/WeightedAddLoop/WeightedAddLoop_M6.java",
+      "bytes": 713,
+      "sha256": "529ff798a35ec650002820638c87de9ef1d4472e214eed5168c74053301180a4"
+    },
+    {
+      "path": "benchmarks/EX_CSC/mutants.jsonl",
+      "bytes": 240676,
+      "sha256": "cfebc1510b222bd83377a473523282b6be537081fc48f3fec00590406ccf4ed1"
+    },
+    {
+      "path": "benchmarks/EX_CSC/subjects.json",
+      "bytes": 35032,
+      "sha256": "2967cdaa3b881101b70bad865253e571b486409b9bd0a43e0a53179b773f1a36"
+    },
+    {
+      "path": "deploy/Dockerfile",
+      "bytes": 1575,
+      "sha256": "65e90e7a5ad374770de8b2fba346c62589001907f68a56673797a75d0f07a212"
+    },
+    {
+      "path": "deploy/compose.yaml",
+      "bytes": 304,
+      "sha256": "4036e4263b6b0e54bae0b26be35aed364eaf66f4a1c6d9169c09d0d5a18ca9a3"
+    },
+    {
+      "path": "deploy/export-image.sh",
+      "bytes": 830,
+      "sha256": "63eba4a2044661c149afc7fd37f9bc86c441d84e542c5f68da5fe666a8bad4fa"
+    },
+    {
+      "path": "deploy/requirements.lock",
+      "bytes": 333,
+      "sha256": "dd334791bf69f8c091bf0a59059d880447d8403e041df2902ca9268ce5901d72"
+    },
+    {
+      "path": "deploy/smoke_check.py",
+      "bytes": 4833,
+      "sha256": "ebf0d67cd247062f95e97563386c9a701da6e6ee778da465438ff2db059a9d19"
+    },
+    {
+      "path": "docs/fsf-format.md",
+      "bytes": 807,
+      "sha256": "ef05b4a1f4b1156f088f84487daa933c657d27884a8d38a55e1ffdfb8556f25b"
+    },
+    {
+      "path": "docs/sbfl-localization-v1.md",
+      "bytes": 1562,
+      "sha256": "7afcdaa412501fef4e6e6197cd70b76b67c65983399f95c99b85918fdda6bb3a"
+    },
+    {
+      "path": "engine/csc_engine/__init__.py",
+      "bytes": 3983,
+      "sha256": "4e2a3c28c5a84dd789a81ec5df75c2a8f0bb4f3f0479154e31cacbbfb14f6bab"
+    },
+    {
+      "path": "engine/csc_engine/analysis_facts.py",
+      "bytes": 6475,
+      "sha256": "1335354e31d993d3470e5e5ac6a658a2286411f007f52b1f72335cf610cf5a52"
+    },
+    {
+      "path": "engine/csc_engine/cct.py",
+      "bytes": 77801,
+      "sha256": "fa64e91b8ec72cfd7091fb1f133b0da9eaa72e73577f7f6c3cc99cda284e0270"
+    },
+    {
+      "path": "engine/csc_engine/cct_snapshot.py",
+      "bytes": 24817,
+      "sha256": "bde9a7982a1e88b2e21309138b762e4cf2c080cc83fcc52e864acd604fdb4e8d"
+    },
+    {
+      "path": "engine/csc_engine/csc.py",
+      "bytes": 24849,
+      "sha256": "6d8791b96fd2281e453a197b564540b25738501d1b43b07b2304d492091e96ee"
+    },
+    {
+      "path": "engine/csc_engine/execution_trace.py",
+      "bytes": 6212,
+      "sha256": "59eb9dc3c9ed1dfcb450c62b4b5e1ffd1b316ac2b8f4d57ae6a0830d11413583"
+    },
+    {
+      "path": "engine/csc_engine/java_exec.py",
+      "bytes": 6278,
+      "sha256": "c0d41c9dd9a7d3a606252a4f3839df3993598c858f99102b6880afb63b31437a"
+    },
+    {
+      "path": "engine/csc_engine/metrics/__init__.py",
+      "bytes": 1235,
+      "sha256": "1b5e807d5ec24ddff3d3613cac989c2230147f24a75950cafb09a8a60f76ea0f"
+    },
+    {
+      "path": "engine/csc_engine/metrics/collect.py",
+      "bytes": 4308,
+      "sha256": "3a3659d847bad7756c05718bc48e415e30612652b29f268ac0cc8cbeecd603f0"
+    },
+    {
+      "path": "engine/csc_engine/metrics/context.py",
+      "bytes": 6432,
+      "sha256": "50f62629e8791b8a8d4b39bf5ec1d903d9f9fc7dd398078b4aa6782e01ea802f"
+    },
+    {
+      "path": "engine/csc_engine/metrics/contract.py",
+      "bytes": 16020,
+      "sha256": "7c8fd4c8354c9136e64dba639dd5ad6339f58066ba2d6c57ae25c6abb1476344"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/__init__.py",
+      "bytes": 1463,
+      "sha256": "ff2935d3b9bdb3c97ffa5fa9c1d575d1c112ebe364d9f28bca41a4c5cc24030e"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/cct_scale.py",
+      "bytes": 2688,
+      "sha256": "18aa8623764bbea3356894a828f3c948e860badc87bf6950a61a01269728b055"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/common.py",
+      "bytes": 3271,
+      "sha256": "4077882b4406b42d5e6b4f04457ceae616387f9deb98e5f610928696d82e7d10"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/coverage.py",
+      "bytes": 4061,
+      "sha256": "a2856e46bc7354e0c1529c0ce22a891aa524a1c6eeae50fe8e47edcdbdd1ec9c"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/obligations.py",
+      "bytes": 3219,
+      "sha256": "cd570e7d1990ed13eecb4f7268ec1f2797de686051fa5ab9a18194373c5ed035"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/runtime.py",
+      "bytes": 3515,
+      "sha256": "9345b120bc76189ce81aaeef24c599bb3df462208dbab8ecd21e25d5e5edaa7d"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/solver.py",
+      "bytes": 2988,
+      "sha256": "1eda4a0b5d31db4096202c7b6f187a0c79e3387007c8bbbe59831e1db03b0307"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/test_suite.py",
+      "bytes": 4445,
+      "sha256": "1072dd009a081c235b32f13ffec6e086c63e4bb3d71f2655b78a4a1727601956"
+    },
+    {
+      "path": "engine/csc_engine/metrics/providers/verification.py",
+      "bytes": 3608,
+      "sha256": "86870e536a9f35b352d15d3c27e3abef9cd4a27efaa912486cee36e6ccafb4b0"
+    },
+    {
+      "path": "engine/csc_engine/metrics/registry.py",
+      "bytes": 4554,
+      "sha256": "d4c43409d8212e1ec90989be2e334afbf2ce2a4634824486e1098265099086d9"
+    },
+    {
+      "path": "engine/csc_engine/metrics/store.py",
+      "bytes": 1775,
+      "sha256": "6bebda599e00a85fcf5a91491be397e635cfb7a1669c5eba40f996c70042bbd0"
+    },
+    {
+      "path": "engine/csc_engine/outcomes/__init__.py",
+      "bytes": 678,
+      "sha256": "769df8c25494783ca243648a8b655803062615bb8dd58518f1721dc79fe898b7"
+    },
+    {
+      "path": "engine/csc_engine/outcomes/contract.py",
+      "bytes": 21337,
+      "sha256": "1235371e821bb5ce2e707ec942d7348e65f4269f2a2f40924bf57744f94db1f0"
+    },
+    {
+      "path": "engine/csc_engine/outcomes/derive.py",
+      "bytes": 25311,
+      "sha256": "63b0367bbbda62828c124d3b976a42d1877b050dc4510d69f5fa1fc204919c27"
+    },
+    {
+      "path": "engine/csc_engine/outcomes/store.py",
+      "bytes": 2447,
+      "sha256": "5a06dc1f8218c365aac9c12b786594f7a2d59d0c804234744643d274f2b377ac"
+    },
+    {
+      "path": "engine/csc_engine/refined_tbfv.py",
+      "bytes": 20766,
+      "sha256": "8520ded54b676a95e1aa75150261a0da6a778538ba7c8b1837475cbe56e933d6"
+    },
+    {
+      "path": "engine/csc_engine/sbfl.py",
+      "bytes": 17957,
+      "sha256": "47a207b7aebcac09d47840aec8962b55874f456b3d60c5d387c6479c37e57a8a"
+    },
+    {
+      "path": "engine/csc_engine/solver_result.py",
+      "bytes": 425,
+      "sha256": "4420e7c877d568907babaab6fecf6b8e2e8ad3cc0260c935cde0d5000a7ab52c"
+    },
+    {
+      "path": "engine/csc_engine/solver_telemetry.py",
+      "bytes": 5382,
+      "sha256": "9804305e711cc9feaa96babfc83d2cfcf3a4bf9881506bd243d67ee016b95f9c"
+    },
+    {
+      "path": "engine/csc_engine/z3_helpers.py",
+      "bytes": 16480,
+      "sha256": "0b93c3cc080a4fa6c3bf40a71dbf5732734e14518e5200be09f7c9cbde178a85"
+    },
+    {
+      "path": "engine/csc_tool.py",
+      "bytes": 58727,
+      "sha256": "2b6e314299f7d04e652ab0f97d41c3d23b24c93d69ed9dc92bdf4d0fa4d4e5e5"
+    },
+    {
+      "path": "engine/java_bridge/pom.xml",
+      "bytes": 1876,
+      "sha256": "04e2b2da9d5d17398ede99495e614f0e334174b5bd58e4d7237e940e8000d9b7"
+    },
+    {
+      "path": "engine/java_bridge/src/main/java/csc/bridge/CSCTrace.java",
+      "bytes": 8558,
+      "sha256": "15b414901a55999112f60c91b1cbe5f5ca6b98d16b9cec00956ae55d7087b17e"
+    },
+    {
+      "path": "engine/java_bridge/src/main/java/csc/bridge/Instrumenter.java",
+      "bytes": 36847,
+      "sha256": "d5e846a7473a4845d936a8ecc037ead0984ff27b0417ddbdff9da60cad61b0df"
+    },
+    {
+      "path": "engine/pyproject.toml",
+      "bytes": 443,
+      "sha256": "6d018aef0ccfe6be807aa07a46e2e3ba509fda76ce8f411d2d24b61a610d049c"
+    },
+    {
+      "path": "engine/refined_tbfv_tool.py",
+      "bytes": 16556,
+      "sha256": "4892909d9ffc195374d6e46ddb7e7789a4991cea97dfe44cb77177ed6b598dd2"
+    },
+    {
+      "path": "examples/AddLoop.fsf",
+      "bytes": 238,
+      "sha256": "ec286c261e5a90e2599b5caa9b05ae430eefb75ea2d6cb04469d8ab883b39ee4"
+    },
+    {
+      "path": "examples/AddLoop.java",
+      "bytes": 564,
+      "sha256": "9c12d66f9ff7d5479cec1134c997de93f53511402027293be811b3e0f529aed5"
+    },
+    {
+      "path": "licenses/Apache-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/TheAlgorithms-MIT.txt",
+      "bytes": 1071,
+      "sha256": "d8499582b215ce90b33be4736260b1bb2e2dc312f71c1b29d19b8fc6d2dcdc3f"
+    },
+    {
+      "path": "schemas/analysis.metrics.v1.schema.json",
+      "bytes": 8970,
+      "sha256": "84bc5cc37bf989eb3dd74701eded46959fc3d9f5358537e7084991763f278884"
+    },
+    {
+      "path": "schemas/analysis.outcome.v1.schema.json",
+      "bytes": 6998,
+      "sha256": "4ec242991f50e5103e6210e6501f1a7877488c16668ced189f211a826cbe1d2e"
+    },
+    {
+      "path": "schemas/cct.snapshot.v1.schema.json",
+      "bytes": 9479,
+      "sha256": "8b7bb744e5328afbdd312b5834a6d4f327a4a3d757a00a93a68d21814d410f8d"
+    },
+    {
+      "path": "start.ps1",
+      "bytes": 4521,
+      "sha256": "ef0a3169947d3afe03b6f8def7a2b2f461beef87bf70733884f1a9e49d36984a"
+    },
+    {
+      "path": "start.sh",
+      "bytes": 4033,
+      "sha256": "af2c9e356ed3da181eb96e7f0d6abe4b231b97451952567f8ed302f88180e1c0"
+    },
+    {
+      "path": "web/backend/app/__init__.py",
+      "bytes": 34,
+      "sha256": "6271050ca111da2cc61cd4824ecde838b98cf3fab7c80b90fbdafb7c074661eb"
+    },
+    {
+      "path": "web/backend/app/analysis_metrics.py",
+      "bytes": 3281,
+      "sha256": "8a3e70339540be519ce55c609cab35c64f9689a016a21c3cc701e5ef1fd87739"
+    },
+    {
+      "path": "web/backend/app/analysis_outcomes.py",
+      "bytes": 4191,
+      "sha256": "7239dc430d24dff541f84fe9ec9f1c8027c41e6cf7b9003e0d4bf1ad8154b2b1"
+    },
+    {
+      "path": "web/backend/app/analysis_sources.py",
+      "bytes": 2406,
+      "sha256": "4c07736cf1d372b0ab67662a798653b97c5ae4f5a10b19f9b16ff5e02f310633"
+    },
+    {
+      "path": "web/backend/app/api.py",
+      "bytes": 16299,
+      "sha256": "832f04eaa850fc44d79863ea6131103df196a0918fe78701f08358b8917dbf22"
+    },
+    {
+      "path": "web/backend/app/config.py",
+      "bytes": 1786,
+      "sha256": "6f8c8281e796c746f26ed5e5113eac0ce4b184a1f2a846d337636fe5a1fc72c2"
+    },
+    {
+      "path": "web/backend/app/core_adapter.py",
+      "bytes": 10095,
+      "sha256": "2ea2e24c06b5c854d34db9e7b1926f97962d3e5486310818cebf43d31a27f7ee"
+    },
+    {
+      "path": "web/backend/app/evidence.py",
+      "bytes": 10705,
+      "sha256": "97b7c547a0851a08af0fdc0bb397ebc702629bad8c1c213434093d1fd476d49f"
+    },
+    {
+      "path": "web/backend/app/jobs.py",
+      "bytes": 17434,
+      "sha256": "6a745a148f239b52438c09327f0328d2a7b75241a7d8539a162a73210898a81f"
+    },
+    {
+      "path": "web/backend/app/launch.py",
+      "bytes": 1285,
+      "sha256": "a4185cd2a27e7aabd2d84a89974514a15a49304ae07aaee18e4348fe28b315ab"
+    },
+    {
+      "path": "web/backend/app/main.py",
+      "bytes": 2424,
+      "sha256": "c3a24cc16807406c4e99305e3aec28603829c0500378fd4b85b1e001be37270f"
+    },
+    {
+      "path": "web/backend/app/models.py",
+      "bytes": 3668,
+      "sha256": "794b484c7dbb82c1fdb8f7aa8b9b1b696324ccf3ea43ce1bedbb4a3427221518"
+    },
+    {
+      "path": "web/backend/app/outcome_policy.py",
+      "bytes": 3441,
+      "sha256": "8cf8e8ffd063d21c87c54da6a9111c68d8c042ee44818e349725050ae503006f"
+    },
+    {
+      "path": "web/backend/app/sbfl_runner.py",
+      "bytes": 1309,
+      "sha256": "13b21192077263793a90ad39ce27441b7c907fe98a979d9bb5e8be4ae90f0726"
+    },
+    {
+      "path": "web/backend/app/session_archive.py",
+      "bytes": 28312,
+      "sha256": "ffb87b949f2dca7ddd9147eb0986333856341b55abe54de9d7d3cf2f8768ca76"
+    },
+    {
+      "path": "web/backend/app/version.py",
+      "bytes": 562,
+      "sha256": "e53fd73ef4f7ef360f007ab2991afeff6727c0afa017f4b932fa5cc7173039ae"
+    },
+    {
+      "path": "web/backend/app/workspaces.py",
+      "bytes": 6924,
+      "sha256": "236524fe3003ab6a4c61c03eb1f443c619c0428087cda3388e7cbaf1728b27b6"
+    },
+    {
+      "path": "web/frontend/assets/analysis-outcome.mjs",
+      "bytes": 14442,
+      "sha256": "34400b4768779c3b997af4d78d4165a5259b54c5eeeacf7657603b424a260fee"
+    },
+    {
+      "path": "web/frontend/assets/app.css",
+      "bytes": 86867,
+      "sha256": "5506996f8b6cb6c7ad2c95fe2cdf2b7b5da09e66c83f3f4b67a614098da30174"
+    },
+    {
+      "path": "web/frontend/assets/app.js",
+      "bytes": 78654,
+      "sha256": "73ea4004c3367716dec8aa86368aa9a7a49256ceef86374a1de1f539d38b36da"
+    },
+    {
+      "path": "web/frontend/assets/cct-tree.mjs",
+      "bytes": 41606,
+      "sha256": "7fa3f185a6ed6a1bc3a8193fdfdf5c6f1a44a61be320644de595a8740bdb405c"
+    },
+    {
+      "path": "web/frontend/assets/evidence-view.mjs",
+      "bytes": 10672,
+      "sha256": "cdb7188962fbcc08f7e9123521dbe444683f046c496900e6ed768ba77d830848"
+    },
+    {
+      "path": "web/frontend/assets/input-domains.mjs",
+      "bytes": 1874,
+      "sha256": "76b2ab2dc7c5139ac977f18d886b418f93aa31f509a11f329c8fdb9b8816c958"
+    },
+    {
+      "path": "web/frontend/assets/metric-cards.mjs",
+      "bytes": 13998,
+      "sha256": "f6386969d05b5a5f19a4f13710acac6cac780da4bc15b877badb13a5279fade1"
+    },
+    {
+      "path": "web/frontend/assets/program-examples.mjs",
+      "bytes": 1234,
+      "sha256": "04a937a05ebb8577a78d97fb03400ecd9ea69e314a86d26adb074b0746bb2248"
+    },
+    {
+      "path": "web/frontend/assets/session-view.mjs",
+      "bytes": 874,
+      "sha256": "8e4f8ab98eaaa0a182d1df2a0df5bb1a0f5848e48a0ec2ff5940f8cf206e0fca"
+    },
+    {
+      "path": "web/frontend/assets/vendor/d3.LICENSE",
+      "bytes": 731,
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+    },
+    {
+      "path": "web/frontend/assets/vendor/d3.v7.9.0.min.js",
+      "bytes": 279706,
+      "sha256": "f2094bbf6141b359722c4fe454eb6c4b0f0e42cc10cc7af921fc158fceb86539"
+    },
+    {
+      "path": "web/frontend/assets/workspace-input.mjs",
+      "bytes": 4013,
+      "sha256": "55c678b6c0afcc89786981b2b366ef629a54e674dafc3af9c5f43b48d7eed9d3"
+    },
+    {
+      "path": "web/frontend/index.html",
+      "bytes": 29112,
+      "sha256": "6b304d85f56b9fd0ae5e266e5ff943e3674f42d47124ebc6b2b6ca09d2d9c068"
+    },
+    {
+      "path": "web/pyproject.toml",
+      "bytes": 472,
+      "sha256": "ec6673a2433a5e863ddb8978793cfd3b4ea2a928466c946fafa8f90327b243b1"
+    }
+  ]
+}

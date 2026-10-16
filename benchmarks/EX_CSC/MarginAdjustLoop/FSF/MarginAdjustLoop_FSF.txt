@@ -1,0 +1,19 @@
+[fsf_1]
+T: start < -80 || start > 80 || count < 0 || count > 30
+D: return_value == -1
+
+[fsf_2]
+T: start >= -80 && start < 0 && count >= 0 && count <= 30 && aggressive == false
+D: return_value == start + 2 * count
+
+[fsf_3]
+T: start >= 0 && start <= 80 && count >= 0 && count <= 30 && aggressive == false
+D: return_value == start - 2 * count
+
+[fsf_4]
+T: start >= -80 && start < 0 && count >= 0 && count <= 30 && aggressive == true
+D: return_value == start + 4 * count
+
+[fsf_5]
+T: start >= 0 && start <= 80 && count >= 0 && count <= 30 && aggressive == true
+D: return_value == start - 4 * count

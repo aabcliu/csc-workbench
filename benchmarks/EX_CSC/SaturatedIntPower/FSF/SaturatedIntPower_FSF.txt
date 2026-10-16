@@ -1,0 +1,131 @@
+[fsf_1]
+T: base < -5 || base > 5 || exponent < 0 || exponent > 7
+D: return_value == -999
+
+[fsf_2]
+T: base >= -5 && base <= 5 && exponent == 0
+D: return_value == 1
+
+[fsf_3]
+T: base >= -5 && base <= 5 && exponent >= 1 && exponent <= 7 && base == 0
+D: return_value == 0
+
+[fsf_4]
+T: base >= -5 && base <= 5 && exponent == 1 && highCap == false && base != 0
+D: return_value == base
+
+[fsf_5]
+T: base >= -5 && base <= 5 && exponent == 1 && highCap == true && base != 0
+D: return_value == base
+
+[fsf_6]
+T: base >= -5 && base <= 5 && exponent == 2 && highCap == false && base != 0 && base * base <= 60
+D: return_value == base * base
+
+[fsf_7]
+T: base >= -5 && base <= 5 && exponent == 2 && highCap == true && base != 0 && base * base <= 120
+D: return_value == base * base
+
+[fsf_8]
+T: base >= -5 && base <= 5 && exponent == 3 && highCap == false && base != 0 && base * base * base > 60
+D: return_value == 60
+
+[fsf_9]
+T: base >= -5 && base <= 5 && exponent == 3 && highCap == false && base != 0 && base * base * base < -60
+D: return_value == -60
+
+[fsf_10]
+T: base >= -5 && base <= 5 && exponent == 3 && highCap == false && base != 0 && base * base * base >= -60 && base * base * base <= 60
+D: return_value == base * base * base
+
+[fsf_11]
+T: base >= -5 && base <= 5 && exponent == 3 && highCap == true && base != 0 && base * base * base > 120
+D: return_value == 120
+
+[fsf_12]
+T: base >= -5 && base <= 5 && exponent == 3 && highCap == true && base != 0 && base * base * base < -120
+D: return_value == -120
+
+[fsf_13]
+T: base >= -5 && base <= 5 && exponent == 3 && highCap == true && base != 0 && base * base * base >= -120 && base * base * base <= 120
+D: return_value == base * base * base
+
+[fsf_14]
+T: base >= -5 && base <= 5 && exponent == 4 && highCap == false && base != 0 && base * base * base * base > 60
+D: return_value == 60
+
+[fsf_15]
+T: base >= -5 && base <= 5 && exponent == 4 && highCap == false && base != 0 && base * base * base * base <= 60
+D: return_value == base * base * base * base
+
+[fsf_16]
+T: base >= -5 && base <= 5 && exponent == 4 && highCap == true && base != 0 && base * base * base * base > 120
+D: return_value == 120
+
+[fsf_17]
+T: base >= -5 && base <= 5 && exponent == 4 && highCap == true && base != 0 && base * base * base * base <= 120
+D: return_value == base * base * base * base
+
+[fsf_18]
+T: base >= -5 && base <= 5 && exponent == 5 && highCap == false && base != 0 && base * base * base * base * base > 60
+D: return_value == 60
+
+[fsf_19]
+T: base >= -5 && base <= 5 && exponent == 5 && highCap == false && base != 0 && base * base * base * base * base < -60
+D: return_value == -60
+
+[fsf_20]
+T: base >= -5 && base <= 5 && exponent == 5 && highCap == false && base != 0 && base * base * base * base * base >= -60 && base * base * base * base * base <= 60
+D: return_value == base * base * base * base * base
+
+[fsf_21]
+T: base >= -5 && base <= 5 && exponent == 5 && highCap == true && base != 0 && base * base * base * base * base > 120
+D: return_value == 120
+
+[fsf_22]
+T: base >= -5 && base <= 5 && exponent == 5 && highCap == true && base != 0 && base * base * base * base * base < -120
+D: return_value == -120
+
+[fsf_23]
+T: base >= -5 && base <= 5 && exponent == 5 && highCap == true && base != 0 && base * base * base * base * base >= -120 && base * base * base * base * base <= 120
+D: return_value == base * base * base * base * base
+
+[fsf_24]
+T: base >= -5 && base <= 5 && exponent == 6 && highCap == false && base != 0 && base * base * base * base * base * base > 60
+D: return_value == 60
+
+[fsf_25]
+T: base >= -5 && base <= 5 && exponent == 6 && highCap == false && base != 0 && base * base * base * base * base * base <= 60
+D: return_value == base * base * base * base * base * base
+
+[fsf_26]
+T: base >= -5 && base <= 5 && exponent == 6 && highCap == true && base != 0 && base * base * base * base * base * base > 120
+D: return_value == 120
+
+[fsf_27]
+T: base >= -5 && base <= 5 && exponent == 6 && highCap == true && base != 0 && base * base * base * base * base * base <= 120
+D: return_value == base * base * base * base * base * base
+
+[fsf_28]
+T: base >= -5 && base <= 5 && exponent == 7 && highCap == false && base != 0 && base * base * base * base * base * base * base > 60
+D: return_value == 60
+
+[fsf_29]
+T: base >= -5 && base <= 5 && exponent == 7 && highCap == false && base != 0 && base * base * base * base * base * base * base < -60
+D: return_value == -60
+
+[fsf_30]
+T: base >= -5 && base <= 5 && exponent == 7 && highCap == false && base != 0 && base * base * base * base * base * base * base >= -60 && base * base * base * base * base * base * base <= 60
+D: return_value == base * base * base * base * base * base * base
+
+[fsf_31]
+T: base >= -5 && base <= 5 && exponent == 7 && highCap == true && base != 0 && base * base * base * base * base * base * base > 120
+D: return_value == 120
+
+[fsf_32]
+T: base >= -5 && base <= 5 && exponent == 7 && highCap == true && base != 0 && base * base * base * base * base * base * base < -120
+D: return_value == -120
+
+[fsf_33]
+T: base >= -5 && base <= 5 && exponent == 7 && highCap == true && base != 0 && base * base * base * base * base * base * base >= -120 && base * base * base * base * base * base * base <= 120
+D: return_value == base * base * base * base * base * base * base
